@@ -12,6 +12,7 @@
     <th>Rev</th>
     <th>Clients count</th>
     <th>Neighboors count</th>
+    <th>Score</th>
   </tr>
 
 <% for node in @nodes %>
@@ -20,12 +21,19 @@
     <td><%=h node.node_id %></td>
     <td><%=h node.lat %></td>
     <td><%=h node.lon %></td>
+    <% if node.landesverband %>
     <td><%=h node.landesverband.name %></td>
     <td><%=h node.partei.name %></td>
     <td><%=h node.crew.name %></td>
+    <% else %>
+    <td>unbekannt</td>
+    <td>unbekannt</td>
+    <td>unbekannt</td>
+    <% end %>
     <td><%=h node.rev %></td>
     <td><%=h node.clients_count %></td>
     <td><%=h node.neighboors_count %></td>
+    <td><%=h   Score.sum('score', :conditions => ['node_id = ?', node.id]) %></td>
     <td><%= link_to 'Show', node %></td>
     <td><%= link_to 'Edit', edit_node_path(node) %></td>
     <td><%= link_to 'Destroy', node, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -8,6 +8,8 @@ heartbeat daemon is able to receive the following data in three different manage
 node_id:string
 rev:string
 
+
+
 = mode: information
 see update, additionally
 name:string
@@ -23,6 +25,12 @@ neighboors:integer
 clients:integer
 
 
-the path
-
+== the path
 http://<server>:<port>/nodes/status/update?<var1>=<value1>&<var2>=<value2>&...&<varn>=<valuen>
+
+== scores
+
+100 scores for new node
+10 scores for 24h heartbeat
+1/2 scores per connected neighboors (24h)
+1/3 scores per connected clients (24h)
