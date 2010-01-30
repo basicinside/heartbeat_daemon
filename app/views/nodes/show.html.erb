@@ -1,0 +1,53 @@
+<p>
+  <b>Name:</b>
+  <%=h @node.name %>
+</p>
+
+<p>
+  <b>Node:</b>
+  <%=h @node.node_id %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%=h @node.lat %>
+</p>
+
+<p>
+  <b>Lon:</b>
+  <%=h @node.lon %>
+</p>
+
+<p>
+  <b>Landesverband:</b>
+  <%=h @node.landesverband.name %>
+</p>
+
+<p>
+  <b>Partei:</b>
+  <%=h @node.partei.name %>
+</p>
+
+<p>
+  <b>Crew:</b>
+  <%=h @node.crew.name %>
+</p>
+
+<p>
+  <b>Rev:</b>
+  <%=h @node.rev %>
+</p>
+
+<p>
+  <b>Clients count:</b>
+  <%=h @node.clients_count %>
+</p>
+
+<p>
+  <b>Neighboors count:</b>
+  <%=h @node.neighboors_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_node_path(@node) %> |
+<%= link_to 'Back', nodes_path %>

@@ -1,0 +1,28 @@
+<h1>Editing crew</h1>
+
+<% form_for(@crew) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :decription %><br />
+    <%= f.text_area :decription %>
+  </p>
+  <p>
+    <%= f.label :homepage %><br />
+    <%= f.text_field :homepage %>
+  </p>
+  <p>
+    <%= f.label :landesverband %><br />
+    <%= f.text_field :landesverband %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @crew %> |
+<%= link_to 'Back', crews_path %>

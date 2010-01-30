@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @landesverband.name %>
+</p>
+
+<p>
+  <b>Decription:</b>
+  <%=h @landesverband.decription %>
+</p>
+
+<p>
+  <b>Homepage:</b>
+  <%=h @landesverband.homepage %>
+</p>
+
+<p>
+  <b>Partei:</b>
+  <%=h @landesverband.partei %>
+</p>
+
+
+<%= link_to 'Edit', edit_landesverband_path(@landesverband) %> |
+<%= link_to 'Back', landesverbands_path %>

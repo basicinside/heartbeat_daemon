@@ -1,0 +1,2 @@
+module ParteisHelper
+end

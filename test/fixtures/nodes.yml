@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  node_id: MyString
+  lat: 9.99
+  lon: 9.99
+  landesverband: 
+  partei: 
+  crew: 
+  rev: MyString
+  clients_count: 1
+  neighboors_count: 1
+
+two:
+  name: MyString
+  node_id: MyString
+  lat: 9.99
+  lon: 9.99
+  landesverband: 
+  partei: 
+  crew: 
+  rev: MyString
+  clients_count: 1
+  neighboors_count: 1
