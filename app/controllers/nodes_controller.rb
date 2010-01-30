@@ -69,7 +69,16 @@ class NodesController < ApplicationController
  			end
  			
  			#save node entry
+ 			@node.last_seen = Time.now
  			@node.save
+ 			
+ 			#add initial score
+ 			initial_score = Score.new
+ 			initial_score.variant = 0
+ 			initial_score.score = 100
+ 			initial_score.node_id = @node.id
+ 			initial_score.save
+ 			puts "added initial score"
   	else
   		#update node
   		
@@ -98,17 +107,49 @@ class NodesController < ApplicationController
   				end	
   				@node.landesverband_id = lv.id
   				@node.partei_id = Partei.find(:first, :conditions => ['id = ?', params[:partei]])
-				
-				
+ 						
+
+ 					#add heartbeat score
+ 				 	puts @node.last_seen
+					if @node.last_seen + 1.day < Time.now
+ 						heartbeat_score = Score.new
+ 						heartbeat_score.variant = 1
+ 						heartbeat_score.score = 10
+ 						heartbeat_score.node_id = @node.id
+ 						heartbeat_score.save
+ 						puts "added heartbeat score"
+ 					end
+					
 					#params saved for highscore
 					if params[:neighboors] && params[:clients]
- 						@node.neighboors_count = @node.neighboors_count < params[:neighboors] ? params[:neighboors] : @node.neighboors_count
- 						@node.clients_count = @node.clients_count < params[:clients] ? params[:clients] : @node.clients_count
+ 						@node.neighboors_count = @node.neighboors_count.to_f < params[:neighboors].to_f ? params[:neighboors].to_f : @node.neighboors_count.to_f
+ 						@node.clients_count = @node.clients_count.to_f < params[:clients].to_f ? params[:clients].to_f : @node.clients_count.to_f
+ 						
+ 						#add client score
+ 						if @node.last_seen + 1.day < Time.now && scr = (params[:clients].to_i/3).floor > 0
+ 							client_score = Score.new
+ 							client_score.variant = 2
+ 							client_score.score = scr
+ 							client_score.node_id = @node.id
+ 							client_score.save
+ 							puts "added client score"
+ 						end
+ 						
+ 						#add neighboor score
+ 						if @node.last_seen + 1.day < Time.now && scr = (params[:neighboors].to_i/2).floor > 0
+ 							neighboor_score = Score.new
+ 							neighboor_score.variant = 3
+ 							neighboor_score.score = scr
+ 							neighboor_score.node_id = @node.id
+ 							neighboor_score.save
+ 							puts "added neighboor score"
+ 						end
  					end
  				end
  			end
   	end
   	respond_to do |format|
+  		@node.last_seen = Time.now
       if @node.save
         flash[:notice] = 'Node was successfully created.'
         format.html { redirect_to :action => "index" }
