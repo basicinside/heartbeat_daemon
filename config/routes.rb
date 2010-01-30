@@ -1,7 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :landesverbands
+	map.parteien 'parteien/:id', :controller => 'parteis'
+	map.parteien 'parteien/:action/:id', :controller => 'parteis'
 
   map.resources :parteis
+  
+    map.resources :highscores
 
   map.resources :crews
 
@@ -40,7 +44,8 @@ ActionController::Routing::Routes.draw do |map|
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   # map.root :controller => "welcome"
-
+	map.root :controller => "nodes"
+	
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
