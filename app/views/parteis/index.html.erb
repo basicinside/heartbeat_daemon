@@ -1,0 +1,24 @@
+<h1>Listing parteien</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Decription</th>
+    <th>Homepage</th>
+  </tr>
+
+<% for partei in @parteien %>
+  <tr>
+    <td><%=h partei.name %></td>
+    <td><%=h partei.decription %></td>
+    <td><%=h partei.homepage %></td>
+    <td><%= link_to 'Show', partei %></td>
+    <td><%= link_to 'Edit', edit_partei_path(partei) %></td>
+    <td><%= link_to 'Destroy', partei, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New partei', new_partei_path %>

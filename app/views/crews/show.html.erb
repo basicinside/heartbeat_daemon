@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @crew.name %>
+</p>
+
+<p>
+  <b>Decription:</b>
+  <%=h @crew.decription %>
+</p>
+
+<p>
+  <b>Homepage:</b>
+  <%=h @crew.homepage %>
+</p>
+
+<p>
+  <b>Landesverband:</b>
+  <%=h @crew.landesverband %>
+</p>
+
+
+<%= link_to 'Edit', edit_crew_path(@crew) %> |
+<%= link_to 'Back', crews_path %>

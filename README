@@ -1,0 +1,28 @@
+== heartbeat daemon
+
+receive heartbeats from nodes running pirate freifunk
+
+heartbeat daemon is able to receive the following data in three different management modes:
+
+= mode: update
+node_id:string
+rev:string
+
+= mode: information
+see update, additionally
+name:string
+lat:decimal
+lon:decimal
+crew:string
+lv:string
+partei:integer //should be 1, if pirate party node
+
+= mode: highscore
+see information, additionally
+neighboors:integer
+clients:integer
+
+
+the path
+
+http://<server>:<port>/nodes/status/update?<var1>=<value1>&<var2>=<value2>&...&<varn>=<valuen>

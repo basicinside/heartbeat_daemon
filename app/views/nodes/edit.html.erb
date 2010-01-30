@@ -1,0 +1,52 @@
+<h1>Editing node</h1>
+
+<% form_for(@node) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :node_id %><br />
+    <%= f.text_field :node_id %>
+  </p>
+  <p>
+    <%= f.label :lat %><br />
+    <%= f.text_field :lat %>
+  </p>
+  <p>
+    <%= f.label :lon %><br />
+    <%= f.text_field :lon %>
+  </p>
+  <p>
+    <%= f.label :landesverband %><br />
+    <%= f.text_field :landesverband %>
+  </p>
+  <p>
+    <%= f.label :partei %><br />
+    <%= f.text_field :partei %>
+  </p>
+  <p>
+    <%= f.label :crew %><br />
+    <%= f.text_field :crew %>
+  </p>
+  <p>
+    <%= f.label :rev %><br />
+    <%= f.text_field :rev %>
+  </p>
+  <p>
+    <%= f.label :clients_count %><br />
+    <%= f.text_field :clients_count %>
+  </p>
+  <p>
+    <%= f.label :neighboors_count %><br />
+    <%= f.text_field :neighboors_count %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @node %> |
+<%= link_to 'Back', nodes_path %>

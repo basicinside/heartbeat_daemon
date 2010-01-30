@@ -1,0 +1,38 @@
+<h1>Listing nodes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Node</th>
+    <th>Lat</th>
+    <th>Lon</th>
+    <th>Landesverband</th>
+    <th>Partei</th>
+    <th>Crew</th>
+    <th>Rev</th>
+    <th>Clients count</th>
+    <th>Neighboors count</th>
+  </tr>
+
+<% for node in @nodes %>
+  <tr>
+    <td><%=h node.name %></td>
+    <td><%=h node.node_id %></td>
+    <td><%=h node.lat %></td>
+    <td><%=h node.lon %></td>
+    <td><%=h node.landesverband.name %></td>
+    <td><%=h node.partei.name %></td>
+    <td><%=h node.crew.name %></td>
+    <td><%=h node.rev %></td>
+    <td><%=h node.clients_count %></td>
+    <td><%=h node.neighboors_count %></td>
+    <td><%= link_to 'Show', node %></td>
+    <td><%= link_to 'Edit', edit_node_path(node) %></td>
+    <td><%= link_to 'Destroy', node, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New node', new_node_path %>
