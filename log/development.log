@@ -4017,3 +4017,114 @@ The error occurred while evaluating nil.name) on line #23 of app/views/nodes/sho
 Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (204.3ms)
 Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.2ms)
 Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing NodesController#show (for 127.0.0.1 at 2010-01-30 23:06:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mNode Load (0.6ms)[0m   [0;1mSELECT * FROM "nodes" WHERE ("nodes"."id" = 2) [0m
+Rendering template within layouts/nodes
+Rendering nodes/show
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #23 of app/views/nodes/show.html.erb:
+20: 
+21: <p>
+22:   <b>Landesverband:</b>
+23:   <%=h @node.landesverband.name %>
+24: </p>
+25: 
+26: <p>
+
+    app/views/nodes/show.html.erb:23
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/nodes_controller.rb:18:in `show'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (40.6ms)
+Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing NodesController#show (for 127.0.0.1 at 2010-01-30 23:06:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mNode Load (0.6ms)[0m   [0mSELECT * FROM "nodes" WHERE ("nodes"."id" = 1) [0m
+Rendering template within layouts/nodes
+Rendering nodes/show
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+Completed in 60ms (View: 46, DB: 2) | 200 OK [http://localhost/nodes/1]

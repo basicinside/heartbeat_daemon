@@ -32,5 +32,5 @@ http://<server>:<port>/nodes/status/update?<var1>=<value1>&<var2>=<value2>&...&<
 
 100 scores for new node
 10 scores for 24h heartbeat
-1/2 scores per connected neighboors (24h)
-1/3 scores per connected clients (24h)
+1/2 scores per connected neighboor (24h)
+1/3 scores per connected client (24h)
