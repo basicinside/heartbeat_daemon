@@ -2,7 +2,8 @@ class NodesController < ApplicationController
   # GET /nodes
   # GET /nodes.xml
   def index
-    @nodes = Node.find(:all)
+    @nodes = Node.find(:all,  :select => "nodes.id, nodes.name,nodes.node_id,nodes.lat,nodes.lon,nodes.rev,nodes.clients_count, nodes.neighboors_count, SUM(scores.score) AS score",
+                :joins => :scores )
 
     respond_to do |format|
       format.html # index.html.erb
@@ -86,6 +87,17 @@ class NodesController < ApplicationController
   		if params[:rev] 
   			@node.rev = params[:rev]
   			
+  			#add heartbeat score
+ 				puts @node.last_seen
+				if @node.last_seen + 1.day < Time.now
+ 					heartbeat_score = Score.new
+ 					heartbeat_score.variant = 1
+ 					heartbeat_score.score = 10
+ 					heartbeat_score.node_id = @node.id
+ 					heartbeat_score.save
+ 					puts "added heartbeat score"
+ 				end
+  			
   			#params saved for informations
   			if params[:name] && params[:lat] && params[:lon] && params[:crew] && params[:lv] && params[:partei]
   				@node.name = params[:name]
@@ -108,18 +120,6 @@ class NodesController < ApplicationController
   				@node.landesverband_id = lv.id
   				@node.partei_id = Partei.find(:first, :conditions => ['id = ?', params[:partei]])
  						
-
- 					#add heartbeat score
- 				 	puts @node.last_seen
-					if @node.last_seen + 1.day < Time.now
- 						heartbeat_score = Score.new
- 						heartbeat_score.variant = 1
- 						heartbeat_score.score = 10
- 						heartbeat_score.node_id = @node.id
- 						heartbeat_score.save
- 						puts "added heartbeat score"
- 					end
-					
 					#params saved for highscore
 					if params[:neighboors] && params[:clients]
  						@node.neighboors_count = @node.neighboors_count.to_f < params[:neighboors].to_f ? params[:neighboors].to_f : @node.neighboors_count.to_f

@@ -33,7 +33,7 @@
     <td><%=h node.rev %></td>
     <td><%=h node.clients_count %></td>
     <td><%=h node.neighboors_count %></td>
-    <td><%=h   Score.sum('score', :conditions => ['node_id = ?', node.id]) %></td>
+    <td><%=h    node.score %></td>
     <td><%= link_to 'Show', node %></td>
     <td><%= link_to 'Edit', edit_node_path(node) %></td>
     <td><%= link_to 'Destroy', node, :confirm => 'Are you sure?', :method => :delete %></td>
