@@ -25,7 +25,7 @@ class HighscoresController < ApplicationController
   # GET /nodes
   # GET /nodes.xml
   def landesverbaende
-    @lvs = Landesverband.find(:all,  :select => "landesverbands.id, landesverbands.name, SUM(scores.score) AS score",
+    @lvs = Landesverband.find(:all,  :select => "landesverbands.*, SUM(scores.score) AS score",
                 :joins =>  :scores, :group => "landesverbands.id", :order => 'SUM(scores.score) DESC')
 
     respond_to do |format|

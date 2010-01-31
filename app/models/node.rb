@@ -1,12 +1,17 @@
 class Node < ActiveRecord::Base
-  belongs_to :landesverband
-  belongs_to :partei
+
+  
   belongs_to :crew
+  has_one :landesverband, :through => :crew, :foreign_key => 'id'
+	has_one :partei, :through =>  :landesverband, :foreign_key => 'id'
   has_many :scores, :dependent => :destroy
+  
   
   def score_count
   	Score.sum('score', :conditions => ['node_id = ?', id])
   end
+  
+
   
   def popup_info
   "<h4><a href='/nodes/#{id}'>#{name}</a></h4>

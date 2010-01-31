@@ -34,8 +34,6 @@ ActiveRecord::Schema.define(:version => 20100130214525) do
     t.string   "node_id"
     t.decimal  "lat"
     t.decimal  "lon"
-    t.integer  "landesverband_id"
-    t.integer  "partei_id"
     t.integer  "crew_id"
     t.string   "rev"
     t.integer  "clients_count"
