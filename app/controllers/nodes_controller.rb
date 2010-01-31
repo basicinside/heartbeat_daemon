@@ -1,5 +1,5 @@
 class NodesController < ApplicationController
-	map_layer :node, :text => :name || :node_id, :lat => :lat, :lon => :lon, :id => :id
+	map_layer :node, :text => :popup_info || :node_id, :lat => :lat, :lon => :lon, :id => :id
 
   # GET /nodes
   # GET /nodes.xml
@@ -27,8 +27,10 @@ class NodesController < ApplicationController
 
  	#function triggered by heartbeat script (node side)
   def status
-  	 if !params[:node_id] && !params[:rev]
-  	 	return
+  	 if !params[:node_id] || !params[:rev] || !(/^[0-9a-f]{32}$/.match(params[:node_id]))
+  	 	flash[:warning] = 'Update fehlgeschlagen<br />Interner Fehler: Datenbank nicht erreichbar.<br /> Bitte versuchen Sie es später noch einmal.'
+      redirect_to :action => "index"
+      return
   	 end
   
   	#check for node

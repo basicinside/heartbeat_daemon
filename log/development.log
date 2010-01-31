@@ -22455,3 +22455,1866 @@ Rendering nodes/index
   [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
 Completed in 92ms (View: 69, DB: 3) | 200 OK [http://localhost/nodes]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 12:58:50) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 47ms (View: 44, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 12:58:51) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 12:58:52) [GET]
+  [4;35;1mNode Load (1.5ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+MapLayers::GEORSS: returning 3 features
+Completed in 199ms (View: 168, DB: 2) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing HighscoresController#landesverbaende (for 127.0.0.1 at 2010-01-31 12:58:54) [GET]
+  [4;36;1mLandesverband Load (0.9ms)[0m   [0;1mSELECT landesverbands.id, landesverbands.name, SUM(scores.score) AS score FROM "landesverbands" INNER JOIN "nodes" ON ("landesverbands"."id" = "nodes"."landesverband_id") INNER JOIN "scores" ON ("scores"."node_id" = "nodes"."id") GROUP BY landesverbands.id ORDER BY SUM(scores.score) DESC[0m
+Rendering template within layouts/application
+Rendering highscores/landesverbaende
+Completed in 37ms (View: 9, DB: 1) | 200 OK [http://localhost/highscores/landesverbaende]
+
+
+Processing HighscoresController#crews (for 127.0.0.1 at 2010-01-31 12:58:56) [GET]
+  [4;35;1mCrew Load (0.9ms)[0m   [0mSELECT crews.id, crews.name, SUM(scores.score) AS score FROM "crews" INNER JOIN "nodes" ON ("crews"."id" = "nodes"."crew_id") INNER JOIN "scores" ON ("scores"."node_id" = "nodes"."id") GROUP BY crews.id ORDER BY SUM(scores.score) DESC[0m
+Rendering template within layouts/application
+Rendering highscores/crews
+Completed in 56ms (View: 8, DB: 1) | 200 OK [http://localhost/highscores/crews]
+
+
+Processing HighscoresController#top10 (for 127.0.0.1 at 2010-01-31 12:58:57) [GET]
+  [4;36;1mNode Load (1.3ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id ORDER BY SUM(scores.score) DESC[0m
+Rendering template within layouts/application
+Rendering highscores/top10
+Completed in 60ms (View: 10, DB: 1) | 200 OK [http://localhost/highscores/top10]
+
+
+Processing LandesverbandsController#index (for 127.0.0.1 at 2010-01-31 12:58:59) [GET]
+  [4;35;1mLandesverband Load (0.7ms)[0m   [0mSELECT * FROM "landesverbands" [0m
+Rendering template within layouts/application
+Rendering landesverbands/index
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 223ms (View: 23, DB: 1) | 200 OK [http://localhost/landesverbands]
+
+
+Processing CrewsController#index (for 127.0.0.1 at 2010-01-31 12:59:00) [GET]
+  [4;35;1mCrew Load (1.4ms)[0m   [0mSELECT * FROM "crews" [0m
+Rendering template within layouts/application
+Rendering crews/index
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+Completed in 52ms (View: 37, DB: 2) | 200 OK [http://localhost/crews]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 12:59:01) [GET]
+  [4;36;1mNode Load (1.3ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.4ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 74ms (View: 56, DB: 3) | 200 OK [http://localhost/nodes]
+
+
+Processing CrewsController#index (for 127.0.0.1 at 2010-01-31 12:59:02) [GET]
+  [4;35;1mCrew Load (0.9ms)[0m   [0mSELECT * FROM "crews" [0m
+Rendering template within layouts/application
+Rendering crews/index
+  [4;36;1mLandesverband Load (93.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+Completed in 216ms (View: 98, DB: 94) | 200 OK [http://localhost/crews]
+
+
+Processing HighscoresController#crews (for 127.0.0.1 at 2010-01-31 12:59:06) [GET]
+  [4;36;1mCrew Load (1.0ms)[0m   [0;1mSELECT crews.id, crews.name, SUM(scores.score) AS score FROM "crews" INNER JOIN "nodes" ON ("crews"."id" = "nodes"."crew_id") INNER JOIN "scores" ON ("scores"."node_id" = "nodes"."id") GROUP BY crews.id ORDER BY SUM(scores.score) DESC[0m
+Rendering template within layouts/application
+Rendering highscores/crews
+Completed in 44ms (View: 10, DB: 1) | 200 OK [http://localhost/highscores/crews]
+
+
+Processing CrewsController#index (for 127.0.0.1 at 2010-01-31 12:59:08) [GET]
+  [4;35;1mCrew Load (0.9ms)[0m   [0mSELECT * FROM "crews" [0m
+Rendering template within layouts/application
+Rendering crews/index
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+Completed in 51ms (View: 39, DB: 1) | 200 OK [http://localhost/crews]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 12:59:10) [GET]
+  [4;36;1mNode Load (1.4ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.4ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (5.6ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 85ms (View: 62, DB: 8) | 200 OK [http://localhost/nodes]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 13:11:05) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 13:11:07) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 13:11:07) [GET]
+  [4;35;1mNode Load (1.4ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+MapLayers::GEORSS: returning 3 features
+Completed in 55ms (View: 2, DB: 1) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:14:54) [GET]
+  [4;36;1mNode Load (1.4ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.4ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.6ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.6ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 149ms (View: 84, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:15:30) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:15:31) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:15:32) [GET]
+  [4;35;1mNode Load (1.3ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+MapLayers::GEORSS: returning 3 features
+Completed in 58ms (View: 3, DB: 1) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:15:49) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:15:50) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:15:50) [GET]
+  [4;36;1mNode Load (1.3ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+MapLayers::GEORSS: returning 3 features
+Completed in 34ms (View: 2, DB: 1) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing HighscoresController#landesverbaende (for 127.0.0.1 at 2010-01-31 14:15:52) [GET]
+  [4;35;1mLandesverband Load (0.9ms)[0m   [0mSELECT landesverbands.id, landesverbands.name, SUM(scores.score) AS score FROM "landesverbands" INNER JOIN "nodes" ON ("landesverbands"."id" = "nodes"."landesverband_id") INNER JOIN "scores" ON ("scores"."node_id" = "nodes"."id") GROUP BY landesverbands.id ORDER BY SUM(scores.score) DESC[0m
+Rendering template within layouts/application
+Rendering highscores/landesverbaende
+Completed in 86ms (View: 15, DB: 1) | 200 OK [http://localhost/highscores/landesverbaende]
+
+
+Processing HighscoresController#crews (for 127.0.0.1 at 2010-01-31 14:15:53) [GET]
+  [4;36;1mCrew Load (1.3ms)[0m   [0;1mSELECT crews.id, crews.name, SUM(scores.score) AS score FROM "crews" INNER JOIN "nodes" ON ("crews"."id" = "nodes"."crew_id") INNER JOIN "scores" ON ("scores"."node_id" = "nodes"."id") GROUP BY crews.id ORDER BY SUM(scores.score) DESC[0m
+Rendering template within layouts/application
+Rendering highscores/crews
+Completed in 34ms (View: 10, DB: 1) | 200 OK [http://localhost/highscores/crews]
+
+
+Processing HighscoresController#top10 (for 127.0.0.1 at 2010-01-31 14:15:54) [GET]
+  [4;35;1mNode Load (1.4ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id ORDER BY SUM(scores.score) DESC[0m
+Rendering template within layouts/application
+Rendering highscores/top10
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/highscores/top10]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:15:55) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:15:56) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:15:57) [GET]
+  [4;36;1mNode Load (1.3ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+MapLayers::GEORSS: returning 3 features
+Completed in 36ms (View: 2, DB: 1) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing LandesverbandsController#index (for 127.0.0.1 at 2010-01-31 14:15:57) [GET]
+  [4;35;1mLandesverband Load (1.1ms)[0m   [0mSELECT * FROM "landesverbands" [0m
+Rendering template within layouts/application
+Rendering landesverbands/index
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 78ms (View: 44, DB: 2) | 200 OK [http://localhost/landesverbands]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:15:58) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:15:59) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:16:00) [GET]
+  [4;35;1mNode Load (1.4ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+MapLayers::GEORSS: returning 3 features
+Completed in 50ms (View: 2, DB: 1) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:24:52) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:24:53) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:24:54) [GET]
+MapLayers::GEORSS: returning no features - Caught exception '/home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/app/models/node.rb:9: syntax error, unexpected kEND, expecting ')'
+/home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/app/models/node.rb:18: syntax error, unexpected $end, expecting kEND'
+Completed in 29ms (View: 0, DB: 0) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:24:57) [GET]
+
+
+SyntaxError (/home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/app/models/node.rb:9: syntax error, unexpected kEND, expecting ')'
+/home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/app/models/node.rb:18: syntax error, unexpected $end, expecting kEND):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:381:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:77:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:89:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:439:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:93:in `const_missing'
+    /app/controllers/nodes_controller.rb:7:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (137.5ms)
+Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (15.9ms)
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:25:15) [GET]
+  [4;36;1mNode Load (1.4ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.7ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (24.6ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 144ms (View: 102, DB: 28) | 200 OK [http://localhost/nodes]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:25:40) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:25:41) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:25:42) [GET]
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant PopupInfo'
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:25:47) [GET]
+  [4;35;1mNode Load (1.5ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.5ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.6ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.8ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 110ms (View: 81, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#show (for 127.0.0.1 at 2010-01-31 14:25:48) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mNode Load (0.6ms)[0m   [0;1mSELECT * FROM "nodes" WHERE ("nodes"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering nodes/show
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 4) [0m
+Completed in 87ms (View: 61, DB: 2) | 200 OK [http://localhost/nodes/4]
+
+
+Processing NodesController#show (for 127.0.0.1 at 2010-01-31 14:26:09) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mNode Load (0.9ms)[0m   [0mSELECT * FROM "nodes" WHERE ("nodes"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering nodes/show
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mLandesverband Load (0.4ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mPartei Load (0.6ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 4) [0m
+Completed in 208ms (View: 62, DB: 3) | 200 OK [http://localhost/nodes/4]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:26:16) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 20ms (View: 17, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:26:17) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:26:17) [GET]
+  [4;36;1mNode Load (1.3ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;35;1mLandesverband Load (0.5ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.7ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 115ms (View: 0, DB: 3) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:26:51) [GET]
+  [4;35;1mNode Load (1.4ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.6ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 128ms (View: 100, DB: 3) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:26:54) [GET]
+  [4;36;1mNode Load (22.2ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;35;1mLandesverband Load (0.4ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 89ms (View: 0, DB: 23) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:27:22) [GET]
+  [4;35;1mNode Load (1.3ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+MapLayers::GEORSS: returning 3 features
+Completed in 43ms (View: 2, DB: 1) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:27:33) [GET]
+  [4;36;1mNode Load (1.3ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;35;1mLandesverband Load (0.6ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 262ms (View: 0, DB: 2) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:27:40) [GET]
+  [4;35;1mNode Load (1.4ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 47ms (View: 0, DB: 2) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:28:02) [GET]
+  [4;36;1mNode Load (1.7ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;35;1mLandesverband Load (0.6ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.5ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+MapLayers::GEORSS: returning 3 features
+Completed in 50ms (View: 2, DB: 3) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:28:47) [GET]
+  [4;35;1mNode Load (3.1ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+MapLayers::GEORSS: returning 3 features
+Completed in 51ms (View: 5, DB: 4) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:28:55) [GET]
+  [4;36;1mNode Load (1.4ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;35;1mLandesverband Load (0.4ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 60ms (View: 0, DB: 2) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:29:07) [GET]
+  [4;35;1mNode Load (1.4ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 80ms (View: 0, DB: 2) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:29:22) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:29:23) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:29:24) [GET]
+  [4;36;1mNode Load (1.4ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;35;1mLandesverband Load (0.5ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 38ms (View: 0, DB: 2) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:29:26) [GET]
+  [4;35;1mNode Load (1.3ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 84ms (View: 0, DB: 2) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:30:24) [GET]
+  [4;36;1mNode Load (1.3ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;35;1mLandesverband Load (0.6ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.6ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+MapLayers::GEORSS: returning no features - Caught exception 'uninitialized constant Node::Scores'
+Completed in 51ms (View: 0, DB: 2) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:30:49) [GET]
+  [4;35;1mNode Load (1.4ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 5) [0m
+MapLayers::GEORSS: returning 3 features
+Completed in 121ms (View: 3, DB: 4) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:31:07) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:31:08) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:31:09) [GET]
+  [4;35;1mNode Load (1.5ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.7ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 5) [0m
+MapLayers::GEORSS: returning 3 features
+Completed in 80ms (View: 2, DB: 4) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:32:13) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 43ms (View: 39, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:32:13) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:32:14) [GET]
+  [4;35;1mNode Load (1.3ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 5) [0m
+MapLayers::GEORSS: returning 3 features
+Completed in 102ms (View: 2, DB: 3) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing MapsController#index (for 127.0.0.1 at 2010-01-31 14:33:30) [GET]
+  Parameters: {"lon"=>"1075494.66584", "lat"=>"6588893.33492", "zoom"=>"6"}
+Rendering template within layouts/application
+Rendering maps/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-31 14:33:31) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/theme/default/style.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 14:33:32) [GET]
+  [4;35;1mNode Load (1.3ms)[0m   [0mSELECT * FROM "nodes" LIMIT 1000[0m
+  [4;36;1mLandesverband Load (0.5ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.7ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 5) [0m
+MapLayers::GEORSS: returning 3 features
+Completed in 100ms (View: 3, DB: 4) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:39:21) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablubgesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+  [4;35;1mNode Load (0.6ms)[0m   [0mSELECT * FROM "nodes" WHERE (node_id = 'blablubgesdf') LIMIT 1[0m
+  [4;36;1mCrew Load (0.5ms)[0m   [0;1mSELECT * FROM "crews" WHERE (name = 'Negroponte') LIMIT 1[0m
+  [4;35;1mLandesverband Load (0.5ms)[0m   [0mSELECT * FROM "landesverbands" WHERE (name = 'Berlin') LIMIT 1[0m
+  [4;36;1mPartei Load (0.5ms)[0m   [0;1mSELECT * FROM "parteis" WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mNode Create (0.5ms)[0m   [0mINSERT INTO "nodes" ("name", "lon", "created_at", "neighboors_count", "rev", "updated_at", "node_id", "clients_count", "partei_id", "crew_id", "last_seen", "landesverband_id", "lat") VALUES('cheater', 21312.12312312312, '2010-01-31 13:39:21', 3, '105055040', '2010-01-31 13:39:21', 'blablubgesdf', 6, 1, 1, '2010-01-31 13:39:21', 1, 12.123123123)[0m
+  [4;36;1mScore Create (0.4ms)[0m   [0;1mINSERT INTO "scores" ("created_at", "updated_at", "node_id", "variant", "score") VALUES('2010-01-31 13:39:22', '2010-01-31 13:39:22', 6, 0, 100)[0m
+  [4;35;1mNode Update (0.6ms)[0m   [0mUPDATE "nodes" SET "last_seen" = '2010-01-31 13:39:22', "updated_at" = '2010-01-31 13:39:22' WHERE "id" = 6[0m
+Redirected to actionindex
+Completed in 357ms (DB: 3) | 302 Found [http://localhost/nodes/status/update?node_id=blablubgesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:39:22) [GET]
+  [4;36;1mNode Load (2.4ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (88.6ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 194ms (View: 86, DB: 92) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#show (for 127.0.0.1 at 2010-01-31 14:39:48) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mNode Load (0.6ms)[0m   [0;1mSELECT * FROM "nodes" WHERE ("nodes"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering nodes/show
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mLandesverband Load (0.6ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT sum("scores".score) AS sum_score FROM "scores" WHERE (node_id = 6) [0m
+Completed in 71ms (View: 54, DB: 3) | 200 OK [http://localhost/nodes/6]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:40:06) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablub212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+  [4;35;1mNode Load (0.6ms)[0m   [0mSELECT * FROM "nodes" WHERE (node_id = 'blablub212gesdf') LIMIT 1[0m
+  [4;36;1mCrew Load (0.5ms)[0m   [0;1mSELECT * FROM "crews" WHERE (name = 'Negroponte') LIMIT 1[0m
+  [4;35;1mLandesverband Load (3.7ms)[0m   [0mSELECT * FROM "landesverbands" WHERE (name = 'Berlin') LIMIT 1[0m
+  [4;36;1mPartei Load (0.7ms)[0m   [0;1mSELECT * FROM "parteis" WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mNode Create (0.4ms)[0m   [0mINSERT INTO "nodes" ("name", "lon", "created_at", "neighboors_count", "rev", "updated_at", "node_id", "clients_count", "partei_id", "crew_id", "last_seen", "landesverband_id", "lat") VALUES('cheater', 21312.12312312312, '2010-01-31 13:40:07', 3, '105055040', '2010-01-31 13:40:07', 'blablub212gesdf', 6, 1, 1, '2010-01-31 13:40:07', 1, 12.123123123)[0m
+  [4;36;1mScore Create (0.4ms)[0m   [0;1mINSERT INTO "scores" ("created_at", "updated_at", "node_id", "variant", "score") VALUES('2010-01-31 13:40:07', '2010-01-31 13:40:07', 7, 0, 100)[0m
+  [4;35;1mNode Update (0.4ms)[0m   [0mUPDATE "nodes" SET "last_seen" = '2010-01-31 13:40:07', "updated_at" = '2010-01-31 13:40:07' WHERE "id" = 7[0m
+Redirected to actionindex
+Completed in 116ms (DB: 7) | 302 Found [http://localhost/nodes/status/update?node_id=blablub212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:40:07) [GET]
+  [4;36;1mNode Load (2.5ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.6ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.5ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.8ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 100ms (View: 78, DB: 5) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#destroy (for 127.0.0.1 at 2010-01-31 14:40:10) [DELETE]
+  Parameters: {"authenticity_token"=>"737ce8146599b412aa57dd13bb80dc77a3e0e0a6", "id"=>"6"}
+  [4;35;1mNode Load (0.5ms)[0m   [0mSELECT * FROM "nodes" WHERE ("nodes"."id" = 6) [0m
+  [4;36;1mScore Load (0.5ms)[0m   [0;1mSELECT * FROM "scores" WHERE ("scores".node_id = 6) [0m
+  [4;35;1mScore Destroy (0.3ms)[0m   [0mDELETE FROM "scores" WHERE "id" = 11[0m
+  [4;36;1mNode Destroy (0.1ms)[0m   [0;1mDELETE FROM "nodes" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/nodes
+Completed in 113ms (DB: 1) | 302 Found [http://localhost/nodes/6]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:40:10) [GET]
+  [4;35;1mNode Load (1.5ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (2.1ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.7ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 136ms (View: 118, DB: 5) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#destroy (for 127.0.0.1 at 2010-01-31 14:40:13) [DELETE]
+  Parameters: {"authenticity_token"=>"737ce8146599b412aa57dd13bb80dc77a3e0e0a6", "id"=>"7"}
+  [4;35;1mNode Load (0.6ms)[0m   [0mSELECT * FROM "nodes" WHERE ("nodes"."id" = 7) [0m
+  [4;36;1mScore Load (0.6ms)[0m   [0;1mSELECT * FROM "scores" WHERE ("scores".node_id = 7) [0m
+  [4;35;1mScore Destroy (0.6ms)[0m   [0mDELETE FROM "scores" WHERE "id" = 12[0m
+  [4;36;1mNode Destroy (0.3ms)[0m   [0;1mDELETE FROM "nodes" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/nodes
+Completed in 36ms (DB: 2) | 302 Found [http://localhost/nodes/7]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:40:13) [GET]
+  [4;35;1mNode Load (1.4ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.5ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.6ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.5ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 93ms (View: 74, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:40:30) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+  [4;36;1mNode Load (0.6ms)[0m   [0;1mSELECT * FROM "nodes" WHERE (node_id = 'blablsdb212gesdf') LIMIT 1[0m
+  [4;35;1mCrew Load (0.7ms)[0m   [0mSELECT * FROM "crews" WHERE (name = 'Negroponte') LIMIT 1[0m
+  [4;36;1mLandesverband Load (0.5ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE (name = 'Berlin') LIMIT 1[0m
+  [4;35;1mPartei Load (0.7ms)[0m   [0mSELECT * FROM "parteis" WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mNode Create (0.4ms)[0m   [0;1mINSERT INTO "nodes" ("name", "lon", "created_at", "neighboors_count", "rev", "updated_at", "node_id", "clients_count", "partei_id", "crew_id", "last_seen", "landesverband_id", "lat") VALUES('cheater', 21312.12312312312, '2010-01-31 13:40:30', 3, '105055040', '2010-01-31 13:40:30', 'blablsdb212gesdf', 6, 1, 1, '2010-01-31 13:40:30', 1, 12.123123123)[0m
+  [4;35;1mScore Create (0.4ms)[0m   [0mINSERT INTO "scores" ("created_at", "updated_at", "node_id", "variant", "score") VALUES('2010-01-31 13:40:30', '2010-01-31 13:40:30', 8, 0, 100)[0m
+  [4;36;1mNode Update (0.4ms)[0m   [0;1mUPDATE "nodes" SET "last_seen" = '2010-01-31 13:40:30', "updated_at" = '2010-01-31 13:40:30' WHERE "id" = 8[0m
+Redirected to actionindex
+Completed in 127ms (DB: 4) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:40:31) [GET]
+  [4;35;1mNode Load (2.2ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.7ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.7ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 88ms (View: 65, DB: 5) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#destroy (for 127.0.0.1 at 2010-01-31 14:41:16) [DELETE]
+  Parameters: {"authenticity_token"=>"737ce8146599b412aa57dd13bb80dc77a3e0e0a6", "id"=>"8"}
+  [4;35;1mNode Load (0.6ms)[0m   [0mSELECT * FROM "nodes" WHERE ("nodes"."id" = 8) [0m
+  [4;36;1mScore Load (0.5ms)[0m   [0;1mSELECT * FROM "scores" WHERE ("scores".node_id = 8) [0m
+  [4;35;1mScore Destroy (0.4ms)[0m   [0mDELETE FROM "scores" WHERE "id" = 13[0m
+  [4;36;1mNode Destroy (0.1ms)[0m   [0;1mDELETE FROM "nodes" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/nodes
+Completed in 78ms (DB: 2) | 302 Found [http://localhost/nodes/8]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:41:16) [GET]
+  [4;35;1mNode Load (9.0ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.6ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.7ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 109ms (View: 83, DB: 11) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:41:53) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Rendering template within layouts/application
+Rendering nodes/status
+
+
+ActionView::MissingTemplate (Missing template nodes/status.erb in view path /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/app/views:):
+    /vendor/rails/actionpack/lib/action_view/template.rb:95:in `find_full_path'
+    /vendor/rails/actionpack/lib/action_view/template.rb:16:in `initialize'
+    /vendor/rails/actionpack/lib/action_view/base.rb:334:in `new'
+    /vendor/rails/actionpack/lib/action_view/base.rb:334:in `_unmemoized__pick_template'
+    /vendor/rails/activesupport/lib/active_support/memoizable.rb:70:in `_pick_template'
+    /vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    /vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    /vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#status (for 127.0.0.1 at 2010-01-31 14:42:55) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+
+
+SyntaxError (/home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/app/controllers/nodes_controller.rb:32: syntax error, unexpected '}', expecting kEND
+/home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/app/controllers/nodes_controller.rb:180: syntax error, unexpected $end, expecting kEND):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:381:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:77:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:89:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:352:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `each'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:392:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (53.4ms)
+Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.2ms)
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:43:02) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+  [4;36;1mNode Load (0.6ms)[0m   [0;1mSELECT * FROM "nodes" WHERE (node_id = 'blablsdb212gesdf') LIMIT 1[0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE (name = 'Negroponte') LIMIT 1[0m
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE (name = 'Berlin') LIMIT 1[0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE (id = '1') LIMIT 1[0m
+  [4;36;1mNode Create (0.4ms)[0m   [0;1mINSERT INTO "nodes" ("name", "lon", "created_at", "neighboors_count", "rev", "updated_at", "node_id", "clients_count", "partei_id", "crew_id", "last_seen", "landesverband_id", "lat") VALUES('cheater', 21312.12312312312, '2010-01-31 13:43:02', 3, '105055040', '2010-01-31 13:43:02', 'blablsdb212gesdf', 6, 1, 1, '2010-01-31 13:43:02', 1, 12.123123123)[0m
+  [4;35;1mScore Create (0.6ms)[0m   [0mINSERT INTO "scores" ("created_at", "updated_at", "node_id", "variant", "score") VALUES('2010-01-31 13:43:02', '2010-01-31 13:43:02', 9, 0, 100)[0m
+  [4;36;1mNode Update (0.3ms)[0m   [0;1mUPDATE "nodes" SET "last_seen" = '2010-01-31 13:43:02', "updated_at" = '2010-01-31 13:43:02' WHERE "id" = 9[0m
+Redirected to actionindex
+
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1090:in `redirect_to_full_url'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1085:in `redirect_to'
+    /app/controllers/nodes_controller.rb:159:in `status'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    /vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/nodes_controller.rb:155:in `status'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /home/robin/.gem/ruby/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (121.3ms)
+Rendered /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.9ms)
+Rendering /home/robin/Ubuntu One/Piraten/freifunk/heartbeat_daemon/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:43:48) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+  [4;35;1mNode Load (1.0ms)[0m   [0mSELECT * FROM "nodes" WHERE (node_id = 'blablsdb212gesdf') LIMIT 1[0m
+  [4;36;1mCrew Load (0.5ms)[0m   [0;1mSELECT * FROM "crews" WHERE (name = 'Negroponte') LIMIT 1[0m
+  [4;35;1mLandesverband Load (0.8ms)[0m   [0mSELECT * FROM "landesverbands" WHERE (name = 'Berlin') LIMIT 1[0m
+  [4;36;1mPartei Load (0.6ms)[0m   [0;1mSELECT * FROM "parteis" WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mNode Update (0.4ms)[0m   [0mUPDATE "nodes" SET "last_seen" = '2010-01-31 13:43:48', "updated_at" = '2010-01-31 13:43:48', "lon" = 21312.12312312312 WHERE "id" = 9[0m
+Redirected to actionindex
+Completed in 74ms (DB: 3) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:43:48) [GET]
+  [4;36;1mNode Load (2.0ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.4ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 93ms (View: 70, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#destroy (for 127.0.0.1 at 2010-01-31 14:43:55) [DELETE]
+  Parameters: {"authenticity_token"=>"737ce8146599b412aa57dd13bb80dc77a3e0e0a6", "id"=>"9"}
+  [4;36;1mNode Load (0.5ms)[0m   [0;1mSELECT * FROM "nodes" WHERE ("nodes"."id" = 9) [0m
+  [4;35;1mScore Load (0.7ms)[0m   [0mSELECT * FROM "scores" WHERE ("scores".node_id = 9) [0m
+  [4;36;1mScore Destroy (0.3ms)[0m   [0;1mDELETE FROM "scores" WHERE "id" = 14[0m
+  [4;35;1mNode Destroy (0.1ms)[0m   [0mDELETE FROM "nodes" WHERE "id" = 9[0m
+Redirected to http://localhost:3000/nodes
+Completed in 315ms (DB: 2) | 302 Found [http://localhost/nodes/9]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:43:56) [GET]
+  [4;36;1mNode Load (1.8ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.5ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.9ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.5ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 109ms (View: 88, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:44:34) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:44:34) [GET]
+  [4;35;1mNode Load (1.3ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.4ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 76ms (View: 52, DB: 3) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:46:45) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:46:46) [GET]
+  [4;36;1mNode Load (4.6ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.6ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.7ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 105ms (View: 73, DB: 7) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:47:01) [GET]
+  [4;35;1mNode Load (1.8ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.7ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.6ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.7ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 95ms (View: 71, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:47:04) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:47:04) [GET]
+  [4;36;1mNode Load (2.3ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.4ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.7ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.8ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 121ms (View: 95, DB: 5) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:47:22) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:47:22) [GET]
+  [4;35;1mNode Load (1.7ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.5ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.5ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 217ms (View: 189, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:47:39) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:47:39) [GET]
+  [4;36;1mNode Load (1.9ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.7ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.9ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.7ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 98ms (View: 71, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:47:50) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:47:50) [GET]
+  [4;35;1mNode Load (1.3ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.4ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.4ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.6ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 196ms (View: 176, DB: 3) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:48:12) [GET]
+  [4;36;1mNode Load (1.8ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.9ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.6ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 81ms (View: 59, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:48:15) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:48:15) [GET]
+  [4;35;1mNode Load (1.7ms)[0m   [0mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;36;1mLandesverband Load (0.6ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.6ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;36;1mPartei Load (0.6ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.5ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 190ms (View: 168, DB: 4) | 200 OK [http://localhost/nodes]
+
+
+Processing NodesController#status (for 127.0.0.1 at 2010-01-31 14:49:02) [GET]
+  Parameters: {"name"=>"cheater", "lon"=>"21312.12312312312", "crew"=>"negroponte", "rev"=>"105055040", "partei"=>"1", "node_id"=>"blablsdb212gesdf", "id"=>"update", "neighboors"=>"3", "lat"=>"12.123123123", "lv"=>"berlin", "clients"=>"6"}
+Redirected to actionindex
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/nodes/status/update?node_id=blablsdb212gesdf&rev=105055040&lv=berlin&name=cheater&partei=1&crew=negroponte&clients=6&neighboors=3&lat=12.123123123&lon=21312.12312312312]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 14:49:02) [GET]
+  [4;36;1mNode Load (1.8ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.6ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 102ms (View: 68, DB: 4) | 200 OK [http://localhost/nodes]
