@@ -4,20 +4,25 @@
 </p>
 
 <p>
-  <b>Decription:</b>
+  <b>Beschreibung:</b>
   <%=h @crew.decription %>
 </p>
 
 <p>
   <b>Homepage:</b>
-  <%=h @crew.homepage %>
+  <%= link_to @crew.homepage, @crew.homepage %>
 </p>
 
 <p>
   <b>Landesverband:</b>
-  <%=h @crew.landesverband %>
+  <%= link_to @crew.landesverband.name, @crew.landesverband %>
+</p>
+<p>
+  <b>Nodes:</b>
+  <% for node in @crew.nodes %>
+  <%= link_to node.name, node %>
+  <% end %>
 </p>
 
-
-<%= link_to 'Edit', edit_crew_path(@crew) %> |
-<%= link_to 'Back', crews_path %>
+<%= link_to 'Bearbeiten', edit_crew_path(@crew) %> |
+<%= link_to 'Zurück', crews_path %>

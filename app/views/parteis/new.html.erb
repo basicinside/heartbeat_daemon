@@ -1,23 +1,5 @@
-<h1>New partei</h1>
+<h1>Neue Partei anlegen</h1>
 
-<% form_for(@partei) do |f| %>
-  <%= f.error_messages %>
+<%= render :partial => "form" %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :decription %><br />
-    <%= f.text_area :decription %>
-  </p>
-  <p>
-    <%= f.label :homepage %><br />
-    <%= f.text_field :homepage %>
-  </p>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', parteis_path %>
+<%= link_to 'Zurück', parteis_path %>

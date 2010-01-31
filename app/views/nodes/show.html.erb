@@ -4,50 +4,44 @@
 </p>
 
 <p>
-  <b>Node:</b>
+  <b>Kennung:</b>
   <%=h @node.node_id %>
 </p>
-
-<p>
-  <b>Lat:</b>
-  <%=h @node.lat %>
-</p>
-
-<p>
-  <b>Lon:</b>
-  <%=h @node.lon %>
-</p>
-
-<p>
-  <b>Landesverband:</b>
-  <%=h @node.landesverband.name %>
-</p>
-
-<p>
-  <b>Partei:</b>
-  <%=h @node.partei.name %>
-</p>
-
-<p>
-  <b>Crew:</b>
-  <%=h @node.crew.name %>
-</p>
-
 <p>
   <b>Rev:</b>
   <%=h @node.rev %>
 </p>
 
 <p>
-  <b>Clients count:</b>
+  <b>Benutzer:</b>
   <%=h @node.clients_count %>
 </p>
 
 <p>
-  <b>Neighboors count:</b>
+  <b>Nachbarn:</b>
   <%=h @node.neighboors_count %>
+</p>
+<p>
+  <b>geographische Position:</b>
+  <%=h @node.lat %>,   <%=h @node.lon %>
+</p>
+<p>
+  <b>Crew:</b>
+     <%= link_to @node.crew.name, @node.crew %>
+</p>
+<p>
+  <b>Landesverband:</b>
+    <%= link_to  @node.landesverband.name, @node.landesverband %>
+</p>
+<p>
+  <b>Partei:</b>
+     <%= link_to @node.partei.name, @node.partei %>
+</p>
+<p>
+  <b>Punkte:</b>
+  <%=h Score.sum('score', :conditions => ['node_id = ?', @node.id]) %>
 </p>
 
 
-<%= link_to 'Edit', edit_node_path(@node) %> |
-<%= link_to 'Back', nodes_path %>
+<%= link_to 'Bearbeiten', edit_node_path(@node) %> |
+<%= link_to 'Zurück', nodes_path %>

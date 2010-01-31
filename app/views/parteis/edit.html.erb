@@ -1,24 +1,6 @@
 <h1>Editing partei</h1>
 
-<% form_for(@partei) do |f| %>
-  <%= f.error_messages %>
+<%= render :partial => "form" %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :decription %><br />
-    <%= f.text_area :decription %>
-  </p>
-  <p>
-    <%= f.label :homepage %><br />
-    <%= f.text_field :homepage %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @partei %> |
-<%= link_to 'Back', parteis_path %>
+<%= link_to 'Anzeigen', @partei %> |
+<%= link_to 'Zurück', parteis_path %>

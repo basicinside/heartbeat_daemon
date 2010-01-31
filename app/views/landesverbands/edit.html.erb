@@ -1,28 +1,6 @@
-<h1>Editing landesverband</h1>
+<h1>Bearbeite Landesverband</h1>
 
-<% form_for(@landesverband) do |f| %>
-  <%= f.error_messages %>
+<%= render :partial => "form" %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :decription %><br />
-    <%= f.text_area :decription %>
-  </p>
-  <p>
-    <%= f.label :homepage %><br />
-    <%= f.text_field :homepage %>
-  </p>
-  <p>
-    <%= f.label :partei %><br />
-    <%= f.select :partei %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @landesverband %> |
-<%= link_to 'Back', landesverbands_path %>
+<%= link_to 'Anzeigen', @landesverband %> |
+<%= link_to 'Zurück', landesverbands_path %>

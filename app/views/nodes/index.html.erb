@@ -1,46 +1,41 @@
-<h1>Listing nodes</h1>
+<h1>Knoten anzeigen</h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Node</th>
-    <th>Lat</th>
-    <th>Lon</th>
+    <th>Rev</th>
+    <th>Benutzer</th>
+    <th>Nachbarn</th>
+    <th>Crew</th>
     <th>Landesverband</th>
     <th>Partei</th>
-    <th>Crew</th>
-    <th>Rev</th>
-    <th>Clients count</th>
-    <th>Neighboors count</th>
-    <th>Score</th>
+
+
+    <th>Punkte</th>
   </tr>
 
 <% for node in @nodes %>
   <tr>
-    <td><%=h node.name %></td>
-    <td><%=h node.node_id %></td>
-    <td><%=h node.lat %></td>
-    <td><%=h node.lon %></td>
+    <td><%= link_to node.name, node %></td>
+    <td><%=h node.rev %></td>
+    <td><%=h node.clients_count %></td>
+    <td><%=h node.neighboors_count %></td>
     <% if node.landesverband %>
-    <td><%=h node.landesverband.name %></td>
-    <td><%=h node.partei.name %></td>
-    <td><%=h node.crew.name %></td>
+   	<td><%= link_to node.crew.name, node.crew %></td>
+    <td><%= link_to node.landesverband.name, node.landesverband %></td>
+    <td><%= link_to node.partei.name, node.partei %></td>
+
     <% else %>
     <td>unbekannt</td>
     <td>unbekannt</td>
     <td>unbekannt</td>
     <% end %>
-    <td><%=h node.rev %></td>
-    <td><%=h node.clients_count %></td>
-    <td><%=h node.neighboors_count %></td>
+
+    
     <td><%=h    node.score %></td>
-    <td><%= link_to 'Show', node %></td>
-    <td><%= link_to 'Edit', edit_node_path(node) %></td>
-    <td><%= link_to 'Destroy', node, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Löschen', node, :confirm => 'Bist du sicher?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
 
-<%= link_to 'New node', new_node_path %>
