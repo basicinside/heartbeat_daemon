@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  node: 
+  score: 1
+  type: 1
+
+two:
+  node: 
+  score: 1
+  type: 1

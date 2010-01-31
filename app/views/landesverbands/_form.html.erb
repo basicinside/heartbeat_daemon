@@ -1,0 +1,24 @@
+<% form_for(@landesverband) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :beschreibung %><br />
+    <%= f.text_area :decription %>
+  </p>
+  <p>
+    <%= f.label :homepage %><br />
+    <%= f.text_field :homepage %>
+  </p>
+  <p>
+    <%= f.label :partei %><br />
+    <%= f.collection_select :partei_id, Partei.find(:all), :id, :name %>
+
+  </p>
+  <p>
+    <%= f.submit "Speichern" %>
+  </p>
+<% end %>

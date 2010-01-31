@@ -1,0 +1,18 @@
+<h1>Highscore Landesverbände</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for lv in @lvs %>
+  <tr>
+    <td><%=h lv.name %></td>
+
+    <td><%=h lv.score %></td>
+
+  </tr>
+<% end %>
+</table>
+

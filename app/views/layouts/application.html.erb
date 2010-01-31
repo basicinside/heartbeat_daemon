@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Parteis: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+
+<p style="color: green"><%= flash[:notice] %></p>
+<p style="color: orange"><%= link_to 'Knoten', nodes_path %> | <%= link_to 'Crews', crews_path %> | <%= link_to 'Landesverbände', landesverbands_path %> - 
+	Highscore: <%= link_to 'Top10', :controller => 'highscores', :action => 'top10' %> | 
+	<%= link_to 'Crews', :controller => 'highscores', :action => 'crews' %> | 
+	<%= link_to 'Landesverbände', :controller => 'highscores', :action => 'landesverbaende' %> - 
+	<a href='/maps/index?zoom=6&lat=6588893.33492&lon=1075494.66584'>Kartenansicht</a></p>
+<%= yield  %>
+
+</body>
+</html>
