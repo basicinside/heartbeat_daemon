@@ -1,9 +1,9 @@
-<h1>Listing landesverbands</h1>
+<h1>Landesverbände anzeigen</h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Decription</th>
+    <th>Beschreibung</th>
     <th>Homepage</th>
     <th>Partei</th>
   </tr>
@@ -12,15 +12,15 @@
   <tr>
     <td><%=h landesverband.name %></td>
     <td><%=h landesverband.decription %></td>
-    <td><%=h landesverband.homepage %></td>
-    <td><%=h landesverband.partei %></td>
-    <td><%= link_to 'Show', landesverband %></td>
-    <td><%= link_to 'Edit', edit_landesverband_path(landesverband) %></td>
-    <td><%= link_to 'Destroy', landesverband, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to landesverband.homepage, landesverband.homepage %></td>
+    <td><%= link_to landesverband.partei.name, landesverband.partei %></td>
+    <td><%= link_to 'Anzeigen', landesverband %></td>
+    <td><%= link_to 'Bearbeiten', edit_landesverband_path(landesverband) %></td>
+    <td><%= link_to 'Löschen', landesverband, :confirm => 'Bist du sicher?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New landesverband', new_landesverband_path %>
+<%= link_to 'Neuen Landesverband anlegen', new_landesverband_path %>

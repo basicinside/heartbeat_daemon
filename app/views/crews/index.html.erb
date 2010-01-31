@@ -1,9 +1,9 @@
-<h1>Listing crews</h1>
+<h1>Crews anzeigen</h1>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Decription</th>
+    <th>Beschreibung</th>
     <th>Homepage</th>
     <th>Landesverband</th>
   </tr>
@@ -12,15 +12,15 @@
   <tr>
     <td><%=h crew.name %></td>
     <td><%=h crew.decription %></td>
-    <td><%=h crew.homepage %></td>
-    <td><%=h crew.landesverband %></td>
-    <td><%= link_to 'Show', crew %></td>
-    <td><%= link_to 'Edit', edit_crew_path(crew) %></td>
-    <td><%= link_to 'Destroy', crew, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to crew.homepage, crew.homepage %></td>
+    <td><%= link_to crew.landesverband.name, crew.landesverband %></td>
+    <td><%= link_to 'Anzeigen', crew %></td>
+    <td><%= link_to 'Bearbeiten', edit_crew_path(crew) %></td>
+    <td><%= link_to 'Löschen', crew, :confirm => 'Bist du sicher?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New crew', new_crew_path %>
+<%= link_to 'Neue Crew anlegen', new_crew_path %>

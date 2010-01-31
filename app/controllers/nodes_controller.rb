@@ -2,8 +2,8 @@ class NodesController < ApplicationController
   # GET /nodes
   # GET /nodes.xml
   def index
-    @nodes = Node.find(:all,  :select => "nodes.id, nodes.name,nodes.node_id,nodes.lat,nodes.lon,nodes.rev,nodes.clients_count, nodes.neighboors_count, SUM(scores.score) AS score",
-                :joins => :scores )
+    @nodes = Node.find(:all,  :select => "nodes.*, SUM(scores.score) AS score",
+                :joins => :scores, :group => 'nodes.id' )
 
     respond_to do |format|
       format.html # index.html.erb

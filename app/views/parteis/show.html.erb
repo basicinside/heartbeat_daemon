@@ -10,9 +10,15 @@
 
 <p>
   <b>Homepage:</b>
-  <%=h @partei.homepage %>
+  <%= link_to @partei.homepage, @partei.homepage %>
+</p>
+<p>
+  <b>Landesverbände:</b>
+  <% for lv in @partei.landesverbands %>
+  <%= link_to lv.name, lv %>
+  <% end %>
 </p>
 
 
-<%= link_to 'Edit', edit_partei_path(@partei) %> |
-<%= link_to 'Back', parteis_path %>
+<%= link_to 'Bearbeiten', edit_partei_path(@partei) %> |
+<%= link_to 'Zurück', parteis_path %>

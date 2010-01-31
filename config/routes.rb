@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :landesverbands
 	map.parteien 'parteien/:id', :controller => 'parteis'
 	map.parteien 'parteien/:action/:id', :controller => 'parteis'
-
+	map.highscores 'highscores/:action', :controller => 'highscores'
   map.resources :parteis
   
     map.resources :highscores

@@ -4,18 +4,24 @@
 </p>
 
 <p>
-  <b>Decription:</b>
+  <b>Beschreibung:</b>
   <%=h @landesverband.decription %>
 </p>
 
 <p>
   <b>Homepage:</b>
-  <%=h @landesverband.homepage %>
+  <%= link_to @landesverband.homepage, @landesverband.homepage %>
 </p>
 
 <p>
   <b>Partei:</b>
-  <%=h @landesverband.partei %>
+  <%= link_to @landesverband.partei.name, @landesverband.partei %>
+</p>
+<p>
+  <b>Crews:</b>
+  <% for crew in @landesverband.crews %>
+  <%= link_to crew.name, crew %>
+  <% end %>
 </p>
 
 
