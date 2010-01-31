@@ -50,24 +50,22 @@ class NodesController < ApplicationController
   			@node.lat = params[:lat]
   			@node.lon = params[:lon]
   		
-	 			#create lv, if necessary
-  			if !(lv = Landesverband.find(:first, :conditions => ['name = ?', params[:lv].capitalize]))
-   				lv = Landesverband.new
-  				lv.name = params[:lv].capitalize
-  				lv.partei_id = params[:partei].to_i
-  				lv.save
-  			end	
-  			@node.landesverband_id = lv.id
-  			@node.partei_id = Partei.find(:first, :conditions => ['id = ?', params[:partei]])
-  			
   			#create crew, if necessary
   			if !(crew = Crew.find(:first, :conditions => ['name = ?', params[:crew].capitalize]))
    				crew = Crew.new
   				crew.name = params[:crew].capitalize
-  				crew.landesverband_id = @node.landesverband_id
   				crew.save
   			end
   			@node.crew_id = crew.id
+  		
+  			#create lv, if necessary
+  			if !(lv = Landesverband.find(:first, :conditions => ['name = ?', params[:lv].capitalize]))
+   				lv = Landesverband.new
+  				lv.name = params[:lv].capitalize
+  				lv.save
+  			end	
+  			@node.landesverband_id = lv.id
+  			@node.partei_id = Partei.find(:first, :conditions => ['id = ?', params[:partei]])
   		
   			#params saved for highscore
 				if params[:neighboors] && params[:clients]
