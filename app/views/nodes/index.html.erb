@@ -8,7 +8,6 @@
     <th>Nachbarn</th>
     <th>Crew</th>
     <th>Landesverband</th>
-    <th>Partei</th>
 
 
     <th>Punkte</th>
@@ -23,7 +22,6 @@
     <% if node.landesverband %>
    	<td><%= link_to node.crew.name, node.crew %></td>
     <td><%= link_to node.landesverband.name, node.landesverband %></td>
-    <td><%= link_to node.partei.name, node.partei %></td>
 
     <% else %>
     <td>unbekannt</td>

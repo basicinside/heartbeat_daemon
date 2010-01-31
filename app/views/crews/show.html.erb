@@ -15,7 +15,10 @@
 
 <p>
   <b>Landesverband:</b>
-  <%= link_to @crew.landesverband.name, @crew.landesverband %>
+  
+  <%= if @crew.landesverband
+  link_to @crew.landesverband.name, @crew.landesverband 
+  end %>
 </p>
 <p>
   <b>Nodes:</b>

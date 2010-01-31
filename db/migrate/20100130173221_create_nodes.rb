@@ -5,8 +5,6 @@ class CreateNodes < ActiveRecord::Migration
       t.string :node_id
       t.decimal :lat
       t.decimal :lon
-      t.references :landesverband
-      t.references :partei
       t.references :crew
       t.string :rev
       t.integer :clients_count

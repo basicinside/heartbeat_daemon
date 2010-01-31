@@ -28,7 +28,7 @@ class NodesController < ApplicationController
  	#function triggered by heartbeat script (node side)
   def status
   	 if !params[:node_id] || !params[:rev] || !(/^[0-9a-f]{32}$/.match(params[:node_id]))
-  	 	flash[:warning] = 'Update fehlgeschlagen<br />Interner Fehler: Datenbank nicht erreichbar.<br /> Bitte versuchen Sie es später noch einmal.'
+  	 	flash[:notice] = 'Update fehlgeschlagen<br />Interner Fehler: Datenbank nicht erreichbar.<br /> Bitte versuchen Sie es später noch einmal.'
       redirect_to :action => "index"
       return
   	 end
@@ -54,17 +54,15 @@ class NodesController < ApplicationController
   			if !(lv = Landesverband.find(:first, :conditions => ['name = ?', params[:lv].capitalize]))
    				lv = Landesverband.new
   				lv.name = params[:lv].capitalize
-  				lv.partei_id = params[:partei].to_i
+  				lv.partei_id = params[:partei] || 1
   				lv.save
-  			end	
-  			@node.landesverband_id = lv.id
-  			@node.partei_id = Partei.find(:first, :conditions => ['id = ?', params[:partei]])
+  			end
   			
   			#create crew, if necessary
   			if !(crew = Crew.find(:first, :conditions => ['name = ?', params[:crew].capitalize]))
    				crew = Crew.new
   				crew.name = params[:crew].capitalize
-  				crew.landesverband_id = @node.landesverband_id
+  				crew.landesverband_id = lv.id
   				crew.save
   			end
   			@node.crew_id = crew.id
@@ -122,10 +120,9 @@ class NodesController < ApplicationController
   				if !(lv = Landesverband.find(:first, :conditions => ['name = ?', params[:lv].capitalize]))
    					lv = Landesverband.new
   					lv.name = params[:lv].capitalize
+  					lv.partei_id = params[:partei] || 1
   					lv.save
   				end	
-  				@node.landesverband_id = lv.id
-  				@node.partei_id = Partei.find(:first, :conditions => ['id = ?', params[:partei]])
  						
 					#params saved for highscore
 					if params[:neighboors] && params[:clients]

@@ -13,7 +13,9 @@
     <td><%=h crew.name %></td>
     <td><%=h crew.decription %></td>
     <td><%= link_to crew.homepage, crew.homepage %></td>
-    <td><%= link_to crew.landesverband.name, crew.landesverband %></td>
+    <td>  <%= if crew.landesverband
+  link_to crew.landesverband.name, crew.landesverband 
+  end %></td>
     <td><%= link_to 'Anzeigen', crew %></td>
     <td><%= link_to 'Bearbeiten', edit_crew_path(crew) %></td>
     <td><%= link_to 'Löschen', crew, :confirm => 'Bist du sicher?', :method => :delete %></td>

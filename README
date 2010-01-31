@@ -34,3 +34,15 @@ http://<server>:<port>/nodes/status/update?<var1>=<value1>&<var2>=<value2>&...&<
 10 scores for 24h heartbeat
 1/2 scores per connected neighboor (24h)
 1/3 scores per connected client (24h)
+
+== map
+
+
+
+== setup
+#drop previous database
+rake db:drop 
+
+#migrate database
+rake db:migrate
+script/server
