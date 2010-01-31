@@ -39,7 +39,7 @@
 </p>
 <p>
   <b>Punkte:</b>
-  <%=h Score.sum('score', :conditions => ['node_id = ?', @node.id]) %>
+  <%=h @node.score_count %>
 </p>
 
 
