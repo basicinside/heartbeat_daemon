@@ -22435,3 +22435,23 @@ Processing NodesController#georss (for 127.0.0.1 at 2010-01-31 12:51:18) [GET]
   [4;36;1mNode Load (1.4ms)[0m   [0;1mSELECT * FROM "nodes" LIMIT 1000[0m
 MapLayers::GEORSS: returning 3 features
 Completed in 42ms (View: 2, DB: 1) | 200 OK [http://localhost/nodes/georss]
+
+
+Processing HighscoresController#crews (for 127.0.0.1 at 2010-01-31 12:54:22) [GET]
+  [4;35;1mCrew Load (0.9ms)[0m   [0mSELECT crews.id, crews.name, SUM(scores.score) AS score FROM "crews" INNER JOIN "nodes" ON ("crews"."id" = "nodes"."crew_id") INNER JOIN "scores" ON ("scores"."node_id" = "nodes"."id") GROUP BY crews.id ORDER BY SUM(scores.score) DESC[0m
+Rendering template within layouts/application
+Rendering highscores/crews
+Completed in 173ms (View: 33, DB: 1) | 200 OK [http://localhost/highscores/crews]
+
+
+Processing NodesController#index (for 127.0.0.1 at 2010-01-31 12:54:44) [GET]
+  [4;36;1mNode Load (1.4ms)[0m   [0;1mSELECT nodes.*, SUM(scores.score) AS score FROM "nodes" INNER JOIN "scores" ON scores.node_id = nodes.id GROUP BY nodes.id[0m
+Rendering template within layouts/application
+Rendering nodes/index
+  [4;35;1mLandesverband Load (0.6ms)[0m   [0mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;36;1mCrew Load (0.4ms)[0m   [0;1mSELECT * FROM "crews" WHERE ("crews"."id" = 1) [0m
+  [4;35;1mPartei Load (0.4ms)[0m   [0mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "landesverbands" WHERE ("landesverbands"."id" = 1) [0m
+  [4;35;1mCrew Load (0.5ms)[0m   [0mSELECT * FROM "crews" WHERE ("crews"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "parteis" WHERE ("parteis"."id" = 1) [0m
+Completed in 92ms (View: 69, DB: 3) | 200 OK [http://localhost/nodes]
