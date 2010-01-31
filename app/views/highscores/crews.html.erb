@@ -1,0 +1,19 @@
+<h1>Highscore Crews</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for crew in @crews %>
+  <tr>
+    <td><%=h crew.name %></td>
+
+    <td><%=h crew.score %></td>
+
+  </tr>
+<% end %>
+</table>
+
+

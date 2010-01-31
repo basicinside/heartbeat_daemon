@@ -1,0 +1,18 @@
+<h1>Highscore Top10</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for node in @top10 %>
+  <tr>
+    <td><%=h node.name %></td>
+
+    <td><%=h node.score %></td>
+
+  </tr>
+<% end %>
+</table>
+
