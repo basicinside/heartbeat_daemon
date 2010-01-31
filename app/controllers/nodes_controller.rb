@@ -1,4 +1,6 @@
 class NodesController < ApplicationController
+	map_layer :node, :text => :name || :node_id, :lat => :lat, :lon => :lon, :id => :id
+
   # GET /nodes
   # GET /nodes.xml
   def index
@@ -19,6 +21,7 @@ class NodesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @node }
+      format.kml  { render :xml => @node }
     end
   end
 

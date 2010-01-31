@@ -4,12 +4,17 @@ ActionController::Routing::Routes.draw do |map|
 	map.parteien 'parteien/:action/:id', :controller => 'parteis'
 	map.highscores 'highscores/:action', :controller => 'highscores'
   map.resources :parteis
-  
+    map.maps 'maps', :controller => 'maps', :action => 'index' 
+    
+  map.maps 'maps/:action', :controller => 'maps' 
+
     map.resources :highscores
 
   map.resources :crews
-
+ map.nodes_georss 'nodes/georss', :controller => 'nodes', :action => 'georss'
   map.resources :nodes
+
+    map.resources :maps
 
   # The priority is based upon order of creation: first created -> highest priority.
 
