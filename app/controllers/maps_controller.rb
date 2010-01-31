@@ -23,7 +23,7 @@ class MapsController < ApplicationController
       page << map.add_layer(MapLayers::OSM_MAPNIK)
       
     	page << map.add_layer(Layer::GeoRSS.new("Nodes", "/nodes/georss", { :projection => OpenLayers::Projection.new("EPSG:900913"), 
-    	 :icon => OpenLayers::Icon.new("/images/flag.png", OpenLayers::Size.new(50,50))}))
+    	 :icon => OpenLayers::Icon.new("/images/flag.png", OpenLayers::Size.new(30,30))}))
     
       page << map.set_center(OpenLayers::LonLat.new(@lon, @lat))
     end
