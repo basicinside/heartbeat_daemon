@@ -4,6 +4,7 @@ class CreateParteis < ActiveRecord::Migration
       t.string :name
       t.text :decription
       t.string :homepage
+      t.references :land
 
       t.timestamps
     end
@@ -12,6 +13,7 @@ class CreateParteis < ActiveRecord::Migration
 		ppd = Partei.new
 		ppd.name = 'Piratenpartei Deutschland'
 		ppd.id = 1
+		ppd.land_id = 1;
 		ppd.save
 		puts "create Partei 'Piratenpartei Deutschland'"
   end

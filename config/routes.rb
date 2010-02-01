@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :lands
+
   map.resources :landesverbands
 	map.parteien 'parteien/:id', :controller => 'parteis'
 	map.parteien 'parteien/:action/:id', :controller => 'parteis'

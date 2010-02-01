@@ -45,16 +45,39 @@ class NodesController < ApplicationController
   		@node.rev = params[:rev]
   		
   		#params saved for informations
-  		if params[:name] && params[:lat] && params[:lon] && params[:crew] && params[:lv] && params[:partei]
+  		if params[:name] && params[:lat] && params[:lon] && params[:crew] && params[:lv]
   			@node.name = params[:name]
   			@node.lat = params[:lat]
   			@node.lon = params[:lon]
+				
+				if !params[:land] 
+					params[:land] = 'Deutschland'
+				end
+				
+				if !params[:partei] || params[:partei] == 1
+					params[:partei] = 'Piratenpartei Deutschland'
+				end
+				
+	 			#create land, if necessary
+  			if !(land = Land.find(:first, :conditions => ['name = ?', params[:land].capitalize]))
+   				land = Land.new
+  				land.name = params[:land].capitalize
+  				land.save
+  			end
+  			
+  			#create lv, if necessary
+  			if !(partei = Partei.find(:first, :conditions => ['name = ?', params[:partei].capitalize]))
+   				partei = Partei.new
+  				partei.name = params[:partei].capitalize
+  				partei.land_id = land
+  				partei.save
+  			end
   		
 	 			#create lv, if necessary
   			if !(lv = Landesverband.find(:first, :conditions => ['name = ?', params[:lv].capitalize]))
    				lv = Landesverband.new
   				lv.name = params[:lv].capitalize
-  				lv.partei_id = params[:partei] || 1
+  				lv.partei_id = partei.id
   				lv.save
   			end
   			
