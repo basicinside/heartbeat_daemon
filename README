@@ -17,7 +17,8 @@ lat:decimal
 lon:decimal
 crew:string
 lv:string
-partei:integer //should be 1, if pirate party node
+partei:string //optional, default 'Piratenpartei Deutschland'
+land:string //optional, default 'Deutschland'
 
 = mode: highscore
 see information, additionally
