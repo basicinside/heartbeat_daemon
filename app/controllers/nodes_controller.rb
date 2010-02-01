@@ -66,7 +66,7 @@ class NodesController < ApplicationController
   			end
   			
   			#create lv, if necessary
-  			if !(partei = Partei.find(:first, :conditions => ['name = ?', params[:partei].capitalize]))
+  			if !(partei = Partei.find(:first, :conditions => ['name = ? AND land_id = ?', params[:partei].capitalize, land.id]))
    				partei = Partei.new
   				partei.name = params[:partei].capitalize
   				partei.land_id = land
@@ -74,7 +74,7 @@ class NodesController < ApplicationController
   			end
   		
 	 			#create lv, if necessary
-  			if !(lv = Landesverband.find(:first, :conditions => ['name = ?', params[:lv].capitalize]))
+  			if !(lv = Landesverband.find(:first, :conditions => ['name = ? AND partei_id = ?', params[:lv].capitalize, partei.id]))
    				lv = Landesverband.new
   				lv.name = params[:lv].capitalize
   				lv.partei_id = partei.id
@@ -82,7 +82,7 @@ class NodesController < ApplicationController
   			end
   			
   			#create crew, if necessary
-  			if !(crew = Crew.find(:first, :conditions => ['name = ?', params[:crew].capitalize]))
+  			if !(crew = Crew.find(:first, :conditions => ['name = ? AND landesverband_id = ?', params[:crew].capitalize, lv.id]))
    				crew = Crew.new
   				crew.name = params[:crew].capitalize
   				crew.landesverband_id = lv.id
@@ -127,26 +127,50 @@ class NodesController < ApplicationController
  				end
   			
   			#params saved for informations
-  			if params[:name] && params[:lat] && params[:lon] && params[:crew] && params[:lv] && params[:partei]
+  			if params[:name] && params[:lat] && params[:lon] && params[:crew] && params[:lv]
   				@node.name = params[:name]
   				@node.lat = params[:lat]
   				@node.lon = params[:lon]
-					#create crew, if necessary
-  				if !(crew = Crew.find(:first, :conditions => ['name = ?', params[:crew].capitalize]))
-   					crew = Crew.new
-  					crew.name = params[:crew].capitalize
-  					crew.save
-  				end
-  				@node.crew_id = crew.id
+  				
+				if !params[:land] 
+					params[:land] = 'Deutschland'
+				end
+				
+				if !params[:partei] || params[:partei] == 1
+					params[:partei] = 'Piratenpartei Deutschland'
+				end
+				
+	 			#create land, if necessary
+  			if !(land = Land.find(:first, :conditions => ['name = ?', params[:land].capitalize]))
+   				land = Land.new
+  				land.name = params[:land].capitalize
+  				land.save
+  			end
+  			
+  			#create lv, if necessary
+  			if !(partei = Partei.find(:first, :conditions => ['name = ? AND land_id = ?', params[:partei].capitalize, land.id]))
+   				partei = Partei.new
+  				partei.name = params[:partei].capitalize
+  				partei.land_id = land
+  				partei.save
+  			end
   		
-  				#create lv, if necessary
-  				if !(lv = Landesverband.find(:first, :conditions => ['name = ?', params[:lv].capitalize]))
-   					lv = Landesverband.new
-  					lv.name = params[:lv].capitalize
-  					lv.partei_id = params[:partei] || 1
-  					lv.save
-  				end	
- 						
+	 			#create lv, if necessary
+  			if !(lv = Landesverband.find(:first, :conditions => ['name = ? AND partei_id = ?', params[:lv].capitalize, partei.id]))
+   				lv = Landesverband.new
+  				lv.name = params[:lv].capitalize
+  				lv.partei_id = partei.id
+  				lv.save
+  			end
+  			
+  			#create crew, if necessary
+  			if !(crew = Crew.find(:first, :conditions => ['name = ? AND landesverband_id = ?', params[:crew].capitalize, lv.id]))
+   				crew = Crew.new
+  				crew.name = params[:crew].capitalize
+  				crew.landesverband_id = lv.id
+  				crew.save
+  			end
+  			@node.crew_id = crew.id 						
 					#params saved for highscore
 					if params[:neighboors] && params[:clients]
  						@node.neighboors_count = @node.neighboors_count.to_f < params[:neighboors].to_f ? params[:neighboors].to_f : @node.neighboors_count.to_f
