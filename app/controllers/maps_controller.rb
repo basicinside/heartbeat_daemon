@@ -4,7 +4,8 @@ class MapsController < ApplicationController
     @lat = params[:lat] 
     @zoom = params[:zoom]
  
-    @map = MapLayers::Map.new("map", :projection => OpenLayers::Projection.new("EPSG:4326")) do |map, page|
+    @map = MapLayers::Map.new("map", :displayProjection => OpenLayers::Projection.new("EPSG:4326"),
+ :projection => OpenLayers::Projection.new("EPSG:4326")) do |map, page|
       
       page << map.add_control(Control::Navigation.new())
       page << map.add_control(Control::PanZoomBar.new())
@@ -20,12 +21,14 @@ class MapsController < ApplicationController
  			#page << map.addLayer(:markers, :projection => OpenLayers::Projection.new("EPSG:900913"))
   		
  
-      page << map.add_layer(MapLayers::OSM_MAPNIK)
+      page << map.add_layer(MapLayers::OSM_MAPNIK , :projection => OpenLayers::Projection.new("EPSG:4326"))
       
     	page << map.add_layer(Layer::GeoRSS.new("Nodes", "/nodes/georss", { :projection => OpenLayers::Projection.new("EPSG:4326"), 
     	 :icon => OpenLayers::Icon.new("/images/flag.png", OpenLayers::Size.new(30,30))}))
-    
-      page << map.set_center(OpenLayers::LonLat.new(@lon, @lat))
+    	
+    	lonlat =  OpenLayers::LonLat.new(@lon, @lat).transform(OpenLayers::Projection.new("EPSG:4326"), map.getProjectionObject())
+    	page << map.set_center(lonlat, @zoom )     
+
     end
 	end
 end
