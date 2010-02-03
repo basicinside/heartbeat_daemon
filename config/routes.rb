@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :crews
  map.nodes_georss 'nodes/georss', :controller => 'nodes', :action => 'georss'
-  map.resources :nodes , :as => 'knoten' 
+  map.resources :nodes
 
     map.resources :maps
 
