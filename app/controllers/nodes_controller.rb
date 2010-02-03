@@ -95,6 +95,10 @@ class NodesController < ApplicationController
 					@node.neighboors_count = params[:neighboors]
  					@node.clients_count = params[:clients]
  				end
+ 			else
+ 				@node.name = ""
+ 				@node.lat = 0
+ 				@node.lon = 0
  			end
  			
  			#save node entry
@@ -196,6 +200,10 @@ class NodesController < ApplicationController
  							puts "added neighboor score"
  						end
  					end
+ 				else
+ 					@node.name = ""
+ 					@node.lat = 0
+ 					@node.lon = 0
  				end
  			end
   	end

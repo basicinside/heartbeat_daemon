@@ -1,11 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :lands
+  map.resources :lands, :as => 'laender' 
 
-  map.resources :landesverbands
+  map.resources :landesverbands, :as => 'landesverbaende' 
 	map.parteien 'parteien/:id', :controller => 'parteis'
 	map.parteien 'parteien/:action/:id', :controller => 'parteis'
 	map.highscores 'highscores/:action', :controller => 'highscores'
-  map.resources :parteis
+  map.resources :parteis, :as => 'parteien'
     map.maps 'maps', :controller => 'maps', :action => 'index' 
     
   map.maps 'maps/:action', :controller => 'maps' 
@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :crews
  map.nodes_georss 'nodes/georss', :controller => 'nodes', :action => 'georss'
-  map.resources :nodes
+  map.resources :nodes , :as => 'knoten' 
 
     map.resources :maps
 
