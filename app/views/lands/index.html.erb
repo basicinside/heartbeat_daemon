@@ -1,0 +1,22 @@
+<h1>Listing lands</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% for land in @lands %>
+  <tr>
+    <td><%=h land.name %></td>
+    <td><%=h land.description %></td>
+    <td><%= link_to 'Show', land %></td>
+    <td><%= link_to 'Edit', edit_land_path(land) %></td>
+    <td><%= link_to 'Destroy', land, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New land', new_land_path %>
