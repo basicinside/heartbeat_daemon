@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @land.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @land.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_land_path(@land) %> |
+<%= link_to 'Back', lands_path %>

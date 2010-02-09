@@ -1,0 +1,2 @@
+module LandsHelper
+end
