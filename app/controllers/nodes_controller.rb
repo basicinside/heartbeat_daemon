@@ -177,8 +177,8 @@ class NodesController < ApplicationController
   			@node.crew_id = crew.id 						
 					#params saved for highscore
 					if params[:neighboors] && params[:clients]
- 						@node.neighboors_count = @node.neighboors_count.to_f < params[:neighboors].to_f ? params[:neighboors].to_f : @node.neighboors_count.to_f
- 						@node.clients_count = @node.clients_count.to_f < params[:clients].to_f ? params[:clients].to_f : @node.clients_count.to_f
+ 						@node.neighboors_count = params[:neighboors].to_f
+ 						@node.clients_count =  params[:clients].to_f
  						
  						#add client score
  						if @node.last_seen + 1.day < Time.now && scr = (params[:clients].to_i/3).floor > 0
@@ -199,6 +199,9 @@ class NodesController < ApplicationController
  							neighboor_score.save
  							puts "added neighboor score"
  						end
+					else
+						@node.neighboors_count = 0
+ 						@node.clients_count =  0
  					end
  				else
  					@node.name = ""
@@ -208,7 +211,9 @@ class NodesController < ApplicationController
  			end
   	end
   	respond_to do |format|
-  		@node.last_seen = Time.now
+			if @node.last_seen + 1.day < Time.now
+				@node.last_seen = Time.now - 5.minutes
+			end
       if @node.save
         flash[:notice] = 'Node was successfully created.'
         format.html { redirect_to :action => "index" }
