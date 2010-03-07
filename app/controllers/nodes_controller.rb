@@ -5,11 +5,11 @@ class NodesController < ApplicationController
   # GET /nodes.xml
   def index
     @nodes = Node.find(:all,  :select => "nodes.*, SUM(scores.score) AS score",
-                :joins => :scores, :group => 'nodes.id' )
+                :joins => :scores, :group => 'nodes.id', :order => 'SUM(scores.score) DESC')
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @nodes }
+      #format.xml  { render :xml => @nodes }
     end
   end
 
@@ -20,7 +20,7 @@ class NodesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @node }
+      #format.xml  { render :xml => @node }
       format.kml  { render :xml => @node }
     end
   end
@@ -228,13 +228,13 @@ class NodesController < ApplicationController
 
   # DELETE /nodes/1
   # DELETE /nodes/1.xml
-  def destroy
-    @node = Node.find(params[:id])
-    @node.destroy
+  #def destroy
+  #  @node = Node.find(params[:id])
+  #  @node.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(nodes_url) }
-      format.xml  { head :ok }
-    end
-  end
+  #  respond_to do |format|
+  #    format.html { redirect_to(nodes_url) }
+  #    format.xml  { head :ok }
+  #  end
+  #end
 end

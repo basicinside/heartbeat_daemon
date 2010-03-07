@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :bugreports
+
   map.resources :lands, :as => 'laender' 
 
   map.resources :landesverbands, :as => 'landesverbaende' 
