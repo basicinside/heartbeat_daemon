@@ -1,0 +1,27 @@
+<h1>New bugreport</h1>
+
+<% form_for(@bugreport) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :version %><br />
+    <%= f.text_field :version %>
+  </p>
+  <p>
+    <%= f.label :hardware %><br />
+    <%= f.text_field :hardware %>
+  </p>
+  <p>
+    <%= f.label :beschreibung %><br />
+    <%= f.text_area :beschreibung %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', bugreports_path %>
