@@ -32,10 +32,8 @@ class BugreportsController < ApplicationController
     end
   end
 
-  # GET /bugreports/1/edit
-  def edit
-    @bugreport = Bugreport.find(params[:id])
-  end
+
+ 
 
   # POST /bugreports
   # POST /bugreports.xml
@@ -54,32 +52,4 @@ class BugreportsController < ApplicationController
     end
   end
 
-  # PUT /bugreports/1
-  # PUT /bugreports/1.xml
-  def update
-    @bugreport = Bugreport.find(params[:id])
-
-    respond_to do |format|
-      if @bugreport.update_attributes(params[:bugreport])
-        flash[:notice] = 'Bugreport was successfully updated.'
-        format.html { redirect_to(@bugreport) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @bugreport.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /bugreports/1
-  # DELETE /bugreports/1.xml
-  def destroy
-    @bugreport = Bugreport.find(params[:id])
-    @bugreport.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(bugreports_url) }
-      format.xml  { head :ok }
-    end
-  end
 end

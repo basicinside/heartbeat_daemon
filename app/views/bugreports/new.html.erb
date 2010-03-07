@@ -1,4 +1,4 @@
-<h1>New bugreport</h1>
+<h1>Fehlerbericht anlegen</h1>
 
 <% form_for(@bugreport) do |f| %>
   <%= f.error_messages %>
@@ -20,8 +20,8 @@
     <%= f.text_area :beschreibung %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Erstellen' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', bugreports_path %>
+<%= link_to 'Zurück', bugreports_path %>

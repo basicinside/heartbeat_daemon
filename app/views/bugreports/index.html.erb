@@ -1,4 +1,4 @@
-<h1>Listing bugreports</h1>
+<h1>Fehlerberichte anzeigen</h1>
 
 <table>
   <tr>
@@ -14,13 +14,11 @@
     <td><%=h bugreport.version %></td>
     <td><%=h bugreport.hardware %></td>
     <td><%=h bugreport.beschreibung %></td>
-    <td><%= link_to 'Show', bugreport %></td>
-    <td><%= link_to 'Edit', edit_bugreport_path(bugreport) %></td>
-    <td><%= link_to 'Destroy', bugreport, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Anzeigen', bugreport %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New bugreport', new_bugreport_path %>
+<%= link_to 'Fehlerbericht erstellen', new_bugreport_path %>
