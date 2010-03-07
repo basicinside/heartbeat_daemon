@@ -1,6 +1,6 @@
 <h1>Knoten anzeigen</h1>
 
-<table>
+<table noborder=0>
   <tr>
     <th>Name</th>
     <th>Rev</th>
@@ -12,9 +12,14 @@
 
     <th>Punkte</th>
   </tr>
-
 <% for node in @nodes %>
-  <tr>
+  <% if node.last_seen + 1.day > Time.now %>
+  	<tr bgcolor="#33CC00">
+  <% elsif node.last_seen + 7.days > Time.now %>
+  	<tr bgcolor="#FFFF00">
+  <% else %>
+  	<tr bgcolor="#FF3300">
+  <%end %>
     <td><%= link_to node.name, node %></td>
     <td><%=h node.rev %></td>
     <td><%=h node.clients_count %></td>
@@ -24,7 +29,6 @@
     <td><%= link_to node.landesverband.name, node.landesverband %></td>
 
     <% else %>
-    <td>unbekannt</td>
     <td>unbekannt</td>
     <td>unbekannt</td>
     <% end %>
