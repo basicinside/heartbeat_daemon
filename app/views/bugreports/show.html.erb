@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @bugreport.name %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%=h @bugreport.version %>
+</p>
+
+<p>
+  <b>Hardware:</b>
+  <%=h @bugreport.hardware %>
+</p>
+
+<p>
+  <b>Beschreibung:</b>
+  <%=h @bugreport.beschreibung %>
+</p>
+
+
+<%= link_to 'Edit', edit_bugreport_path(@bugreport) %> |
+<%= link_to 'Back', bugreports_path %>
