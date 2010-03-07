@@ -9,12 +9,12 @@
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p><img src='/images/flag.png'> Das ist der Heartbeat Server der Piratenfreifunk-Firmware.<img src='/images/flag.png'>
-<p style="color: orange"><%= link_to 'Knoten', nodes_path %> | <%= link_to 'Crews', crews_path %> | <%= link_to 'Landesverbände', landesverbands_path %> - 
+<p style="color: green"><%= flash[:notice] %></p>
+<p style="color: orange"><img src='/images/flag.png'><%= link_to 'Übersicht', nodes_path %> - 
 	Highscore: <%= link_to 'Top10', :controller => 'highscores', :action => 'top10' %> | 
 	<%= link_to 'Crews', :controller => 'highscores', :action => 'crews' %> | 
 	<%= link_to 'Landesverbände', :controller => 'highscores', :action => 'landesverbaende' %> - 
-	<%= link_to 'Kartenansicht', :controller => 'maps', :action => 'index' %></p>
+	<%= link_to 'Kartenansicht', :controller => 'maps', :action => 'index' %> - <%= link_to 'Fehlerbericht', :controller => 'bugreports', :action => 'new' %><img src='/images/flag.png'></p>
 <%= yield  %>
 
 </body>
