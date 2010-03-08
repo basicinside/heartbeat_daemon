@@ -1,16 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :bugreports
+  map.resources :hardwares, :as => 'hardware'
+
+  map.resources :bugreports, :as => 'fehlerberichte'
 
   map.resources :lands, :as => 'laender' 
 
   map.resources :landesverbands, :as => 'landesverbaende' 
-	map.parteien 'parteien/:id', :controller => 'parteis'
-	map.parteien 'parteien/:action/:id', :controller => 'parteis'
+	#map.parteien 'parteien/:id', :controller => 'parteis'
+	#map.parteien 'parteien/:action/:id', :controller => 'parteis'
 	map.highscores 'highscores/:action', :controller => 'highscores'
   map.resources :parteis, :as => 'parteien'
-    map.maps 'maps', :controller => 'maps', :action => 'index' 
+    #map.maps 'maps', :controller => 'maps', :action => 'index' 
     
-  map.maps 'maps/:action', :controller => 'maps' 
+  #map.maps 'maps/:action', :controller => 'maps' 
 
     map.resources :highscores
 
@@ -18,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
  map.nodes_georss 'nodes/georss', :controller => 'nodes', :action => 'georss'
   map.resources :nodes
 
-    map.resources :maps
+    map.resources :maps, :as => 'karte'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

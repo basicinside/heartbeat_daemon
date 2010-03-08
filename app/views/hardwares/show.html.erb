@@ -1,0 +1,21 @@
+<p>
+  <b>Name:</b>
+  <%=h @hardware.name %>
+</p>
+<p>
+  <b>Hersteller:</b>
+  <%=h @hardware.hersteller %>
+</p>
+<p>
+  <b>Beschreibung:</b>
+  <%=h @hardware.beschreibung %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%=h @hardware.link %>
+</p>
+
+
+<%= link_to 'Bearbeiten', edit_hardware_path(@hardware) %> |
+<%= link_to 'Zurück', hardwares_path %>

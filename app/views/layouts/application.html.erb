@@ -14,7 +14,7 @@
 	Highscore: <%= link_to 'Top10', :controller => 'highscores', :action => 'top10' %> | 
 	<%= link_to 'Crews', :controller => 'highscores', :action => 'crews' %> | 
 	<%= link_to 'Landesverbände', :controller => 'highscores', :action => 'landesverbaende' %> - 
-	<%= link_to 'Kartenansicht', :controller => 'maps', :action => 'index' %> - <%= link_to 'Fehlerbericht', :controller => 'bugreports', :action => 'new' %><img src='/images/flag.png'></p>
+	<%= link_to 'Kartenansicht', :controller => 'maps', :action => 'index', :zoom => 6, :lat => 50.99993, :lon => 9.66797 %> - <%= link_to 'Fehlerberichte', :controller => 'bugreports' %><img src='/images/flag.png'></p>
 <%= yield  %>
 
 </body>

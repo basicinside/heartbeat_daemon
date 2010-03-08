@@ -25,8 +25,18 @@ class HighscoresController < ApplicationController
   # GET /nodes
   # GET /nodes.xml
   def landesverbaende
-    @lvs = Landesverband.find(:all,  :select => "landesverbands.*, SUM(scores.score) AS score",
-                :joins =>  :scores, :group => "landesverbands.id", :order => 'SUM(scores.score) DESC')
+    @lvs = Landesverband.find(:all,  :select => "landesverbands.*, SUM(scores.score) AS score", 
+                :joins =>  {:nodes => :scores}, :group => "landesverbands.id", :order => 'SUM(scores.score) DESC')
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @nodes }
+    end
+  end
+  
+def parteien
+    @parteis = Partei.find(:all,  :select => "parteis.*, SUM(scores.score) AS score",
+                :joins =>  {:crews => {:nodes => :scores}},:group => "parteis.id", :order => 'SUM(scores.score) DESC')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100307081728) do
+ActiveRecord::Schema.define(:version => 20100308091152) do
 
   create_table "bugreports", :force => true do |t|
     t.string   "name"
     t.string   "version"
-    t.string   "hardware"
+    t.integer  "hardware_id"
     t.text     "beschreibung"
+    t.text     "uci"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,6 +26,15 @@ ActiveRecord::Schema.define(:version => 20100307081728) do
     t.text     "decription"
     t.string   "homepage"
     t.integer  "landesverband_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hardwares", :force => true do |t|
+    t.string   "name"
+    t.string   "hersteller"
+    t.text     "beschreibung"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

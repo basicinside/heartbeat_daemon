@@ -1,0 +1,17 @@
+<h1>Highscore Parteien</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for partei in @parteis %>
+  <tr>
+    <td><%=h partei.name %></td>
+
+    <td><%=h partei.score %></td>
+
+  </tr>
+<% end %>
+</table>

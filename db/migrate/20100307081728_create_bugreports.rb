@@ -3,9 +3,9 @@ class CreateBugreports < ActiveRecord::Migration
     create_table :bugreports do |t|
       t.string :name
       t.string :version
-      t.string :hardware
+      t.references :hardware
       t.text :beschreibung
-
+      t.text :uci
       t.timestamps
     end
   end
