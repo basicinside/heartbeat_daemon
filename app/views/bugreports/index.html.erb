@@ -5,15 +5,15 @@
     <th>Name</th>
     <th>Version</th>
     <th>Hardware</th>
-    <th>Beschreibung</th>
+    <th>eingereicht am</th>
   </tr>
 
 <% @bugreports.each do |bugreport| %>
   <tr>
     <td><%=h bugreport.name %></td>
     <td><%=h bugreport.version %></td>
-    <td><%=h bugreport.hardware %></td>
-    <td><%=h bugreport.beschreibung %></td>
+    <td><%=h bugreport.hardware.name %></td>
+    <td><%=h bugreport.created_at %></td>
     <td><%= link_to 'Anzeigen', bugreport %></td>
   </tr>
 <% end %>

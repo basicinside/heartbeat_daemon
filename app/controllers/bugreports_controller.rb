@@ -2,7 +2,7 @@ class BugreportsController < ApplicationController
   # GET /bugreports
   # GET /bugreports.xml
   def index
-    @bugreports = Bugreport.all
+    @bugreports = Bugreport.find(:all, :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +24,7 @@ class BugreportsController < ApplicationController
   # GET /bugreports/new
   # GET /bugreports/new.xml
   def new
-    @bugreport = Bugreport.new
+    @bugreport = Bugreport.new(params[:bugreport])
 
     respond_to do |format|
       format.html # new.html.erb

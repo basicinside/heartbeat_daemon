@@ -12,12 +12,8 @@ pre {
   font-size: 11px;
 }
 
-table {
-	border: 0px;
-}
-
 a { color: #000; }
-a:visited { color: #000; }
+a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
 .fieldWithErrors {

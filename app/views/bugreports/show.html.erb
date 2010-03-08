@@ -10,7 +10,7 @@
 
 <p>
   <b>Hardware:</b>
-  <%=h @bugreport.hardware %>
+  <%=h @bugreport.hardware.name %>
 </p>
 
 <p>
@@ -19,5 +19,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_bugreport_path(@bugreport) %> |
-<%= link_to 'Back', bugreports_path %>
+<%= link_to 'Zurück', bugreports_path %>

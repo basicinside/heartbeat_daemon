@@ -1,0 +1,27 @@
+<h1>Neue Hardware anlegen</h1>
+
+<% form_for(@hardware) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :hersteller %><br />
+    <%= f.text_field :hersteller %>
+  </p>
+  <p>
+    <%= f.label :beschreibung %><br />
+    <%= f.text_area :beschreibung %>
+  </p>
+  <p>
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </p>
+  <p>
+    <%= f.submit 'Erstellen' %>
+  </p>
+<% end %>
+
+<%= link_to 'Zurück', hardwares_path %>
