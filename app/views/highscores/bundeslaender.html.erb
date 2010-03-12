@@ -1,0 +1,18 @@
+<h3>Bundesländer Highscore</h3>
+
+<table width='60%'>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for lv in @lvs %>
+  <tr>
+    <td><%= link_to lv.name, lv %></td>
+
+    <td><center><%=h lv.score %></center></td>
+
+  </tr>
+<% end %>
+</table>
+
