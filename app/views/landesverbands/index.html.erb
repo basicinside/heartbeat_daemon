@@ -1,9 +1,8 @@
-<h1>Landesverbände anzeigen</h1>
+<h3>Bundesländer anzeigen</h3>
 
-<table>
+<table width='100%'>
   <tr>
     <th>Name</th>
-    <th>Beschreibung</th>
     <th>Homepage</th>
     <th>Partei</th>
   </tr>
@@ -11,7 +10,6 @@
 <% for landesverband in @landesverbands %>
   <tr>
     <td><%=h landesverband.name %></td>
-    <td><%=h landesverband.decription %></td>
     <td><%= link_to landesverband.homepage, landesverband.homepage %></td>
     <td><%= link_to landesverband.partei.name, landesverband.partei %></td>
     <td><%= link_to 'Anzeigen', landesverband %></td>
@@ -23,4 +21,4 @@
 
 <br />
 
-<%= link_to 'Neuen Landesverband anlegen', new_landesverband_path %>
+<%= link_to 'Neues Bundesland erstellen', new_landesverband_path %>

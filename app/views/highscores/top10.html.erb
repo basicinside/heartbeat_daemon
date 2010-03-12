@@ -1,6 +1,6 @@
-<h1>Highscore Top10</h1>
+<h3>Top10 Highscore</h3>
 
-<table>
+<table width='60%'>
   <tr>
     <th>Name</th>
     <th>Punkte</th>
@@ -8,9 +8,9 @@
 
 <% for node in @top10 %>
   <tr>
-    <td><%=h node.name %></td>
+    <td><%= link_to node.name, node %></td>
 
-    <td><%=h node.score %></td>
+    <td><center><%=h node.score %></center></td>
 
   </tr>
 <% end %>

@@ -1,4 +1,4 @@
-<h1>Fehlerbericht anlegen</h1>
+<h3>Fehlerbericht erstellen</h3>
 
 <% form_for(@bugreport) do |f| %>
   <%= f.error_messages %>
@@ -9,19 +9,29 @@
   </p>
   <p>
     <%= f.label :version %><br />
+     
+    <% if @bugreport.version %>
+    <%= f.text_field :version, :disabled => 'disabled' %>
+    <% else %>
     <%= f.collection_select :version, Node.find(:all, :select => 'rev', :group => 'rev', :order => 'rev DESC'), :rev, :rev %>
+     <% end %>
   </p>
     <p>
-    <%= f.label 'Bitte wählen Sie Ihr Gerät aus' %><br />
+    <%= f.label 'Hardware' %><br />
     <%= f.collection_select :hardware_id, Hardware.all, :id, :bezeichnung %>
+    <%= link_to 'Hardware hinzufügen', new_hardware_path %>
   </p>
   <p>
-    <%= f.label 'Bitte beschreiben Sie ihr Problem genauer' %><br />
-    <%= f.text_area :beschreibung %>
+    <%= f.label 'Problembericht' %><br />
+    <%= f.text_area :beschreibung, :size => "100%x15px" %>
   </p>
   <p>
-    <%= f.label 'Konfiguration (automatisiert ausgefüllt)' %><br />
-    <%= f.text_area :uci, :disabled => 'disabled' %>
+    <%= f.label 'Konfiguration' %><br />
+    <% if @bugreport.uci %>
+    <%= f.text_area :uci, :disabled => 'disabled', :size => "100%x15px" %>
+    <% else %>
+    <%= f.text_area :uci, :size => "100%x15px"  %>
+    <% end %>
   </p>
   <p>
     <%= f.submit 'Fehlerbericht erstellen' %>

@@ -1,13 +1,13 @@
-<h1>Knoten anzeigen (<%= Node.count %>) </h1>
+<h3>Knoten anzeigen (<%= @nodes.count %>) </h3>
 
-<table border="0" cellspacing="0" >
+<table border="0" cellspacing="0" width='100%' >
   <tr>
     <th>Name</th>
-    <th>Rev</th>
+    <th>Version</th>
     <th>Benutzer</th>
     <th>Nachbarn</th>
     <th>Crew</th>
-    <th>Landesverband</th>
+    <th>Bundesland</th>
 
 
     <th>Punkte</th>
@@ -22,8 +22,8 @@
   <%end %>
     <td><%= link_to node.name, node %></td>
     <td><%=h node.rev %></td>
-    <td><%=h node.clients_count %></td>
-    <td><%=h node.neighboors_count %></td>
+    <td><%=h node.clients_count.to_i %></td>
+    <td><%=h node.neighboors_count.to_i %></td>
     <% if node.landesverband %>
    	<td><%= link_to node.crew.name, node.crew %></td>
     <td><%= link_to node.landesverband.name, node.landesverband %></td>

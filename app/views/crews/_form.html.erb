@@ -14,7 +14,7 @@
     <%= f.text_field :homepage %>
   </p>
   <p>
-    <%= f.label :landesverband %><br />
+    <%= f.label 'Bundesland' %><br />
     <%= f.collection_select :landesverband_id, Landesverband.find(:all), :id, :name %>
 
   </p>

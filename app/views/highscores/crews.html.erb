@@ -1,6 +1,6 @@
-<h1>Highscore Crews</h1>
+<h3>Crews Highscore</h3>
 
-<table>
+<table width='60%'>
   <tr>
     <th>Name</th>
     <th>Punkte</th>
@@ -8,9 +8,9 @@
 
 <% for crew in @crews %>
   <tr>
-    <td><%=h crew.name %></td>
+    <td><%= link_to crew.name, crew %></td>
 
-    <td><%=h crew.score %></td>
+    <td><center><%=h crew.score %></center></td>
 
   </tr>
 <% end %>
