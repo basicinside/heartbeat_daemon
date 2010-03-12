@@ -1,10 +1,10 @@
 class NodesController < ApplicationController
-	map_layer :node, :text => :popup_info || :node_id, :lat => :lat, :lon => :lon, :id => :id
+	map_layer :node, :text => :popup_info || :node_id, :lat => :lat || 0, :lon => :lon || 0, :id => :id
 
   # GET /nodes
   # GET /nodes.xml
   def index
-    @nodes = Node.find(:all,  :select => "nodes.*, SUM(scores.score) AS score",
+    @nodes = Node.find(:all, :conditions => ["nodes.name != ''"],  :select => "nodes.*, SUM(scores.score) AS score ",
                 :joins => :scores, :group => 'nodes.id', :order => 'SUM(scores.score) DESC')
 
     respond_to do |format|
@@ -108,7 +108,7 @@ class NodesController < ApplicationController
  			#add initial score
  			initial_score = Score.new
  			initial_score.variant = 0
- 			initial_score.score = 100
+ 			initial_score.score = 500
  			initial_score.node_id = @node.id
  			initial_score.save
  			puts "added initial score"
@@ -124,7 +124,7 @@ class NodesController < ApplicationController
 				if @node.last_seen + 1.day < Time.now
  					heartbeat_score = Score.new
  					heartbeat_score.variant = 1
- 					heartbeat_score.score = 10
+ 					heartbeat_score.score = 5
  					heartbeat_score.node_id = @node.id
  					heartbeat_score.save
  					puts "added heartbeat score"
@@ -181,20 +181,20 @@ class NodesController < ApplicationController
  						@node.clients_count =  params[:clients].to_f
  						
  						#add client score
- 						if @node.last_seen + 1.day < Time.now && scr = (params[:clients].to_i/3).floor > 0
+ 						if @node.last_seen + 1.day < Time.now
  							client_score = Score.new
  							client_score.variant = 2
- 							client_score.score = scr
+ 							client_score.score = 1
  							client_score.node_id = @node.id
  							client_score.save
  							puts "added client score"
  						end
  						
  						#add neighboor score
- 						if @node.last_seen + 1.day < Time.now && scr = (params[:neighboors].to_i/2).floor > 0
+ 						if @node.last_seen + 1.day < Time.now
  							neighboor_score = Score.new
  							neighboor_score.variant = 3
- 							neighboor_score.score = scr
+ 							neighboor_score.score = 2
  							neighboor_score.node_id = @node.id
  							neighboor_score.save
  							puts "added neighboor score"
