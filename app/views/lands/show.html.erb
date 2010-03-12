@@ -4,10 +4,16 @@
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Beschreibung:</b>
   <%=h @land.description %>
+</p>
+<p>
+  <b>Parteien:</b>
+  <% for partei in @land.parteis %>
+  <%= link_to partei.name, partei %>
+  <% end %>
 </p>
 
 
-<%= link_to 'Edit', edit_land_path(@land) %> |
-<%= link_to 'Back', lands_path %>
+<%= link_to 'Bearbeiten', edit_land_path(@land) %> |
+<%= link_to 'Zur Übersicht', lands_path %>

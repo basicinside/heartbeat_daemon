@@ -1,16 +1,14 @@
-<h1>Parteien anzeigen</h1>
+<h3>Parteien anzeigen</h3>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Beschreibung</th>
     <th>Homepage</th>
   </tr>
 
 <% for partei in @parteien %>
   <tr>
     <td><%=h partei.name %></td>
-    <td><%=h partei.decription %></td>
     <td><%= link_to partei.homepage, partei.homepage %></td>
     <td><%= link_to 'Anzeigen', partei %></td>
     <td><%= link_to 'Bearbeiten', edit_partei_path(partei) %></td>
@@ -21,4 +19,4 @@
 
 <br />
 
-<%= link_to 'Neue Partei anlegen', new_partei_path %>
+<%= link_to 'Partei erstellen', new_partei_path %>

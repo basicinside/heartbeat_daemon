@@ -1,17 +1,15 @@
-<h1>Crews anzeigen</h1>
+<h3>Crews anzeigen</h3>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Beschreibung</th>
     <th>Homepage</th>
-    <th>Landesverband</th>
+    <th>Bundesland</th>
   </tr>
 
 <% for crew in @crews %>
   <tr>
     <td><%=h crew.name %></td>
-    <td><%=h crew.decription %></td>
     <td><%= link_to crew.homepage, crew.homepage %></td>
     <td>  <%= if crew.landesverband
   link_to crew.landesverband.name, crew.landesverband 
@@ -25,4 +23,4 @@
 
 <br />
 
-<%= link_to 'Neue Crew anlegen', new_crew_path %>
+<%= link_to 'Crew erstellen', new_crew_path %>

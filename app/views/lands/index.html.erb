@@ -1,22 +1,20 @@
-<h1>Listing lands</h1>
+<h3>Länder anzeigen</h3>
 
-<table>
+<table width='100%'>
   <tr>
     <th>Name</th>
-    <th>Description</th>
   </tr>
 
 <% for land in @lands %>
   <tr>
     <td><%=h land.name %></td>
-    <td><%=h land.description %></td>
-    <td><%= link_to 'Show', land %></td>
-    <td><%= link_to 'Edit', edit_land_path(land) %></td>
-    <td><%= link_to 'Destroy', land, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Anzeigen', land %></td>
+    <td><%= link_to 'Bearbeiten', edit_land_path(land) %></td>
+    <td><%= link_to 'Löschen', land, :confirm => 'Bist du sicher?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New land', new_land_path %>
+<%= link_to 'Land erstellen', new_land_path %>

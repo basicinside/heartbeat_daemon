@@ -1,4 +1,4 @@
-<h1>Editing land</h1>
+<h3>Land bearbeiten</h3>
 
 <% form_for(@land) do |f| %>
   <%= f.error_messages %>
@@ -8,13 +8,13 @@
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label 'Beschreibung' %><br />
     <%= f.text_field :description %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "Speichern" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @land %> |
-<%= link_to 'Back', lands_path %>
+<%= link_to 'Anzeigen', @land %> |
+<%= link_to 'Zur Übersicht', lands_path %>

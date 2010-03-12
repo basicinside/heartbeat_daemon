@@ -4,7 +4,7 @@
 </p>
 
 <p>
-  <b>Decription:</b>
+  <b>Beschreibung:</b>
   <%=h @partei.decription %>
 </p>
 
@@ -13,7 +13,7 @@
   <%= link_to @partei.homepage, @partei.homepage %>
 </p>
 <p>
-  <b>Landesverbände:</b>
+  <b>Bundesländer:</b>
   <% for lv in @partei.landesverbands %>
   <%= link_to lv.name, lv %>
   <% end %>
