@@ -14,10 +14,14 @@ class Node < ActiveRecord::Base
 
   
   def popup_info
-  "<h4><a href='/nodes/#{id}'>#{name || node_id}</a></h4>
-  Firmware #{rev}<br />
-  <a href='/landesverbaende/#{landesverband.id}'>Crew #{crew.name}</a><br />
-  <a href='/crews/#{crew.id}'>LV #{landesverband.name}</a><br />
- 	#{score_count} Punkte"
+  	if name != ''
+  		"<h4><a href='/nodes/#{id}'>#{name || node_id}</a></h4>
+  		Firmware #{rev}<br />
+  		<a href='/landesverbaende/#{landesverband.id}'>Crew #{crew.name}</a><br />
+  		<a href='/crews/#{crew.id}'>LV #{landesverband.name}</a><br />
+ 			#{score_count} Punkte"
+ 		else
+ 		""
+ 		end
   end
 end
