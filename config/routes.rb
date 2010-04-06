@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :hardwares, :as => 'hardware'
+map.connect 'fehlerberichte/new', :controller => 'bugreports', :action => 'new',
+                :conditions => { :method => :post }
 
   map.resources :bugreports, :as => 'fehlerberichte'
 

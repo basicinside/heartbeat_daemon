@@ -1,6 +1,11 @@
 class BugreportsController < ApplicationController
   # GET /bugreports
   # GET /bugreports.xml
+
+  skip_before_filter :verify_authenticity_token
+  
+   #verify :method => :post, :only => :new, :add_headers => {‘Allow’ => ‘POST’}
+
   def index
     @bugreports = Bugreport.find(:all, :order => 'created_at DESC')
 
