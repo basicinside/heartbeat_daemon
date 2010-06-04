@@ -1,6 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+    map.login 'login', :controller => 'user_sessions', :action => 'new'  
+    map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'  
+    map.resources :user_sessions  
+	map.resources :users  
   map.resources :hardwares, :as => 'hardware'
-map.connect 'fehlerberichte/new', :controller => 'bugreports', :action => 'new',
+	map.connect 'fehlerberichte/new', :controller => 'bugreports', :action => 'new',
                 :conditions => { :method => :post }
 
   map.resources :bugreports, :as => 'fehlerberichte'
@@ -19,7 +23,7 @@ map.connect 'fehlerberichte/new', :controller => 'bugreports', :action => 'new',
     map.resources :highscores
 
   map.resources :crews
- map.nodes_georss 'nodes/georss', :controller => 'nodes', :action => 'georss'
+ 	map.nodes_georss 'nodes/georss', :controller => 'nodes', :action => 'georss'
   map.resources :nodes
 
     map.resources :maps, :as => 'karte'

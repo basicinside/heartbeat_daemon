@@ -1,0 +1,13 @@
+    <h3> Anmeldung </h3>  
+      
+    <% form_for @user_session do |form| %>  
+    <%= form.error_messages %>  
+      <br />  
+        <%= form.label :username, "Benutzername" %>  
+        <%= form.text_field :username %>  
+     <br />  
+       <%= form.label :password, "Kennwort" %>  
+       <%= form.password_field :password %>  
+     <br />  
+       <%= form.submit "Submit" %>  
+   <% end %>  

@@ -2,182 +2,126 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<link rel="stylesheet" type="text/css" href="/cascade.css" />
-	<link rel="stylesheet"  media="only screen and (max-device-width: 480px)" href="/iphone.css" type="text/css" /> 
-	<link rel="stylesheet"  media="handheld" href="/iphone.css" type="text/css" /> 
+	<link rel="stylesheet" type="text/css" href="/stylesheets/cascade.css" />
+	<link rel="stylesheet"  media="only screen and (max-device-width: 480px)" href="phone.css" type="text/css" /> 
+	<link rel="stylesheet"  media="handheld" href="iphone.css" type="text/css" /> 
 	<link rel="shortcut icon" href="/images/logo32x32.png" />
 	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
 	<meta http-equiv="content-script-type" content="text/javascript" />
-	<title>Piratenfreifunk - Heartbeat Daemon</title>
-	<script type="text/javascript"> 
-		if (top != self) 
-  			top.location = self.location;		
+	<title><%= h(yield(:title) || "heartbeat.piratenfreifunk.de") %></title>
 
-		function show_menu_items(item){	
-			var mid = document.getElementById('iphone_menu_items');
-			var nodes = mid.getElementsByTagName('tr');		
-			var needle = /^level/;
-			var joker= document.getElementById('iphone_menu_joker');
-			var check_level = item.lastIndexOf('_')
-			var back = item.slice(0, check_level);
-			
-			if(check_level != -1){
-				joker.style.display = 'inline';
-				joker.href = 'javascript:show_menu_items(\''+back+'\');';		
-			}else{
-				joker.style.display = 'none';
-			}
-			
-			for (var i = 0; i < nodes.length; ++i) {
-				if (nodes[i].className!=item && needle.test(nodes[i].className)){
-					nodes[i].style.display='none';
-				} else {
-					if (needle.test(nodes[i].className)) {
-						nodes[i].style.display='';
-					}
-				}
-			}
-		}
-	</script>
-in
 </head>
 
 <body>
-
-
-<!-- Begin background layers -->
-<div id="main_bg_pattern">
-<div id="main_bg">
-	<!-- Begin Header -->
-	<div id="logo">
-		<a href="https://piratenpartei.de">
-			<img src="/images/logos_merged.png" border="0"/>
-		</a>
-	</div>
+<div id="main">
 	<div id="header">
-		<a href="https://piratenpartei.de">
-			<img id="heading" src="/images/piratenfreifunk.png" border="0"/>
-		</a>
+		<a id="heading" href="http://heartbeat.piratenfreifunk.de">heartbeat.piratenfreifunk.de</a>
+
+
+		<!-- Begin menu bar -->
+		<div id="menubar" class="high_res_only">
+			<!-- Begin main menu -->
+			<div id="mainmenu" class="pulldown">
+				<div>
+					<a href="/">Übersicht</a>
+				</div>	
+				<div>
+					<a href="/karte?lat=50.99993&lon=9.66797&zoom=6">Karte</a>
+				</div>		
+				<div>
+					<a href="/fehlerberichte">Fehlerberichte</a>
+				</div>		
+				<div>
+					<a href="/highscores/index">Highscore</a>
+					<ul>
+						<li>
+							<a href="/highscores/bundeslaender">Bundesländer</a>
+						</li>
+						<li>
+							<a href="/highscores/crews">Crews</a>
+						</li>
+						<li>
+							<a href="/highscores/top10">Geräte</a>
+						</li>
+						<!-- Begin lower round corners -->
+						<li class="lower_corners">
+							<table>
+								<tr>
+									<td class="l"></td>
+									<td class="c"></td>
+									<td class="r"></td>
+								</tr>
+							</table>
+						</li>
+						<!-- End lower round corners -->
+					</ul>
+				</div>		
+	
+				</div><!-- END main menu -->	
+
+<div id="changes" class="pulldown"><!-- BEGIN changes -->
+
+
+				</div><!-- END changes -->
+
+				<div id="modemenu" class="pulldown"><!-- BEGIN mode menu -->
+					<div> <!-- this DIV is important for the CSS-selector -->
+									<a class='red' href="">Meine Geräte</a></li>
+
+
+									<ul>
+										<li><a id='red' href="/luci/freifunk">metalgear</a></li>
+
+										<li><a id='yellow' href="/luci/admin">bluecove</a></li>
+										<li><a id='green' href="/luci/mini">segen_panel</a></li>
+										<!-- Begin lower round corners -->
+										<li class="lower_corners">
+											<table>
+												<tr>
+													<td class="l"></td>
+													<td class="c"></td>
+
+													<td class="r"></td>
+												</tr>
+											</table>
+										</li>
+										<!-- End lower round corners -->
+									</ul>
+					</div>
+				</div><!-- END mode menu -->	
+
+
+		</div><!-- END menu bar -->
+
+		</div><!-- END header -->
+	<div id="logo">
 	</div>
-
-	<div class="pathbar separator black whitetext bold">
-
+	<div id="stats">
+		<span>
+<% if current_user %>
+<b>Mein Profil:</b> 
+<%= current_user.username %> [<a href='/users/current/edit'>bearbeiten</a>] [<a href='/logout'>abmelden</a>]
+	<span><b>Meine Punkte:</b> 666
+<% else %>
+<i>nicht angemeldet</i> [<a href='/login'>anmelden</a>] [<a href='/users/new'>registrieren</a>]
+<% end %></span>
+	</span>
 	</div>
-	<!-- End header -->
-	<!-- Begin menu bar -->
-	<div id="menubar" class="high_res_only">
-		<!-- Begin main menu -->
-		<div id="mainmenu">
-			<div ><%= link_to 'Übersicht', nodes_path %> </div> 
-  <div ><%= link_to 'Kartenansicht', :controller => 'maps', :action => 'index', :zoom => 6, :lat => 50.99993, :lon => 9.66797 %></div>
-<div> <%= link_to 'Fehlerberichte', :controller => 'bugreports' %> </div>
-	<div>Highscore<ul>
-	<li>
-	 <%= link_to 'Top 10', :controller => 'highscores', :action => 'top10' %>  </li>	<li>
-	<%= link_to 'Crews', :controller => 'highscores', :action => 'crews' %> </li>	<li>
-	<%= link_to 'Bundesländer', :controller => 'highscores', :action => 'bundeslaender' %>
+	<div id="maincontent">
+	          <% if flash && flash != {}  %>
+                <fieldset class="cbi-section">
+                        <%- flash.each do |name, msg| -%>
+                        <%= msg %> <br>
+                <% end %>
+        </fieldset>
+        <% end %>
+<%= yield %>
 
-									</li>
-									
-	<!-- Begin lower round corners -->
-	<li class="lower_corners">
-		<table>
-			<tr>
-				<td class="l"></td>
-				<td class="c"></td>
-				<td class="r"></td>
-			</tr>
-		</table>
-	</li>
-	<!-- End lower round corners -->
-</ul></div> 
-		</div>
-		<!-- end main menu -->
+</div> <!-- END #maincontent -->
+	<div id="footer">
+		
+		<a href="http://heartbeat.piratenfreifunk.de" class="piratenlink">heartbeat.piratenfreifunk.de</a>
 	</div>
-	<!-- end menu bar -->
-
-	<!-- Begin adbar for low_res frame -->
-	<div id="adbar_low_res_container" class="low_res_only">
-		<table class="main_content_frame low_res"> <!-- same style as main content frame-->
-			<tr>
-				<td class="lt">
-  				</td>
-	  			<td class="ct">	
-  				</td>  
-  				<td class="rt">
- 				</tr>
- 			<tr>
-  				<td class="lc">
-  				</td>
-  				<td class="main">
-					
-  				</td>
-  				<td class="rc">
-  				</td>
-			</tr>
- 			<tr>
-  				<td class="lb">
-  				</td>
-  				<td class="cb">
-  				</td>  
-  				<td class="rb">
-  				</td>
- 			</tr>
-		</table>
-	</div>
-	<!-- End adbar for low_res frame -->
-
-	<!-- begin content -->
-	<table id="content_table">
-		<tr>
-			<!-- begin sidebar -->
-			<td id="sidebar_container" class="high_res_only">
-				
-			</td>
-			<!-- end Sidebar -->
-			<!-- begin main content-->
-			<td id="main_content_container"> 
-			<!-- begin main content frame -->
-				<table class="main_content_frame">
-					<tr>
-						<td class="lt_spec">
-  						</td>
-	  					<td class="ct">	
-  						</td>  
-  						<td class="rt">
- 						</tr>
- 					<tr>
-  						<td class="lc">
-  						</td>
-  						<td class="main">
-							<!--- begin actual main content -->
-							<div id="maincontent">
-					<p style="color: green"><%= flash[:notice] %></p>	
-<%= yield  %>
-	</div>
-							<!--- end actual main content --->
-  						</td>
-  						<td class="rc">
-  						</td>
-					</tr>
- 					<tr>
-  						<td class="lb">
-  						</td>
-  						<td class="cb">
-  						</td>  
-  						<td class="rb">
-  						</td>
- 					</tr>
-				</table>
-				<!--- end main content frame --->
-			</td>
-			<!-- End main content -->
-		</tr>
-	</table>
-	<div class="luci separator black whitetext bold"><a href="http://piratenfreifunk.de">Powered by Piratenfreifunk</a></div>
-
-</div>
-<!-- end background layers -->
 </div>
 </body>
 </html>
