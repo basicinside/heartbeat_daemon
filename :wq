@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="cascade.css" />
+	<link rel="stylesheet"  media="only screen and (max-device-width: 480px)" href="phone.css" type="text/css" /> 
+	<link rel="stylesheet"  media="handheld" href="iphone.css" type="text/css" /> 
+	<link rel="shortcut icon" href="/images/logo32x32.png" />
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<title><%= h(yield(:title) || "heartbeat.piratenfreifunk.de") %></title>
+
+</head>
+
+<body>
+<div id="main">
+	<div id="header">
+		<a id="heading" href="http://heartbeat.piratenfreifunk.de">heartbeat.piratenfreifunk.de</a>
+
+
+		<!-- Begin menu bar -->
+		<div id="menubar" class="high_res_only">
+			<!-- Begin main menu -->
+			<div id="mainmenu" class="pulldown">
+				<div>
+					<a href="/">Übersicht</a>
+				</div>	
+				<div>
+					<a href="/karte?lat=50.99993&lon=9.66797&zoom=6">Karte</a>
+				</div>		
+				<div>
+					<a href="/fehlerberichte">Fehlerberichte</a>
+				</div>		
+				<div>
+					<a href="/highscores/index">Highscore</a>
+					<ul>
+						<li>
+							<a href="/highscores/bundeslaender">Bundesländer</a>
+						</li>
+						<li>
+							<a href="/highscores/crews">Crews</a>
+						</li>
+						<li>
+							<a href="/highscores/top10">Geräte</a>
+						</li>
+						<!-- Begin lower round corners -->
+						<li class="lower_corners">
+							<table>
+								<tr>
+									<td class="l"></td>
+									<td class="c"></td>
+									<td class="r"></td>
+								</tr>
+							</table>
+						</li>
+						<!-- End lower round corners -->
+					</ul>
+				</div>		
+	
+				</div><!-- END main menu -->	
+
+<div id="changes" class="pulldown"><!-- BEGIN changes -->
+
+
+				</div><!-- END changes -->
+
+				<div id="modemenu" class="pulldown"><!-- BEGIN mode menu -->
+					<div> <!-- this DIV is important for the CSS-selector -->
+									<a class='red' href="">Meine Geräte</a></li>
+
+
+									<ul>
+										<li><a id='red' href="/luci/freifunk">metalgear</a></li>
+
+										<li><a id='yellow' href="/luci/admin">bluecove</a></li>
+										<li><a id='green' href="/luci/mini">segen_panel</a></li>
+										<!-- Begin lower round corners -->
+										<li class="lower_corners">
+											<table>
+												<tr>
+													<td class="l"></td>
+													<td class="c"></td>
+
+													<td class="r"></td>
+												</tr>
+											</table>
+										</li>
+										<!-- End lower round corners -->
+									</ul>
+					</div>
+				</div><!-- END mode menu -->	
+
+
+		</div><!-- END menu bar -->
+
+		</div><!-- END header -->
+	<div id="logo">
+	</div>
+	<div id="stats">
+		<span>
+<% if current_user %>
+<b>Mein Profil:</b> 
+robin [<a href='/users/current/edit'>bearbeiten</a>] [<a href='/logout'>abmelden</a>]
+<% else %>
+<i>nicht angemeldet.</i>[<a href='/login'>anmelden</a>] [<a href='/users/new'>registrieren</a>]
+<% end %></span>
+		<span><b>Meine Punkte:</b> 666</span>
+	</div>
+	<div id="maincontent">
+	          <% if flash && flash != {}  %>
+                <fieldset class="cbi-section">
+                        <%- flash.each do |name, msg| -%>
+                        <%= msg %> <br>
+                <% end %>
+        </fieldset>
+        <% end %>
+<%= yield %>
+
+</div> <!-- END #maincontent -->
+	<div id="footer">
+		
+		<a href="http://heartbeat.piratenfreifunk.de" class="piratenlink">heartbeat.piratenfreifunk.de</a>
+	</div>
+</div>
+</body>
+</html>
+

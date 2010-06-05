@@ -5,10 +5,14 @@ class CreateNodes < ActiveRecord::Migration
       t.string :node_id
       t.decimal :lat
       t.decimal :lon
-      t.references :crew
       t.string :rev
       t.integer :clients_count
       t.integer :neighboors_count
+			t.text :uci
+			t.string 
+      
+			t.references :user
+			t.references :hardware
 
       t.timestamps
     end
