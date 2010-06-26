@@ -4,37 +4,23 @@
   <tr>
     <th>Name</th>
     <th>Version</th>
-    <th>Benutzer</th>
-    <th>Nachbarn</th>
-    <th>Crew</th>
-    <th>Bundesland</th>
 
 
     <th>Punkte</th>
   </tr>
 <% for node in @nodes %>
-  <% if node.last_seen + 1.day > Time.now %>
+  <% if node.last_seen + 1.day > Date.today %>
   	<tr bgcolor="#33CC00">
-  <% elsif node.last_seen + 7.days > Time.now %>
+  <% elsif node.last_seen + 7.days > Date.today %>
   	<tr bgcolor="#FFFF00">
   <% else %>
   	<tr bgcolor="#FF3300">
   <%end %>
     <td><%= link_to node.name, node %></td>
-    <td><%=h node.rev %></td>
-    <td><%=h node.clients_count.to_i %></td>
-    <td><%=h node.neighboors_count.to_i %></td>
-    <% if node.landesverband %>
-   	<td><%= link_to node.crew.name, node.crew %></td>
-    <td><%= link_to node.landesverband.name, node.landesverband %></td>
-
-    <% else %>
-    <td>unbekannt</td>
-    <td>unbekannt</td>
-    <% end %>
+    <td align='center'><%=h node.version %></td>
 
     
-    <td><%=h    node.score %></td>
+    <td align='center'><%=h    node.score %></td>
   </tr>
 <% end %>
 </table>

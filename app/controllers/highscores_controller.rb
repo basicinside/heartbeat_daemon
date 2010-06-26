@@ -2,8 +2,8 @@ class HighscoresController < ApplicationController
   # GET /nodes
   # GET /nodes.xml
   def crews
-    @crews = Crew.find(:all,  :select => "crews.id, crews.name, SUM(scores.score) AS score",
-                :joins =>  :scores, :group => "crews.id", :order => 'SUM(scores.score) DESC')
+    @crews = Group.find(:all,  :select => "groups.id, groups.name, SUM(scores.score) AS score",
+                :joins =>  {:users => {:nodes => :scores}}, :group => "groups.id", :order => 'SUM(scores.score) DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,8 +25,8 @@ class HighscoresController < ApplicationController
   # GET /nodes
   # GET /nodes.xml
   def bundeslaender
-    @lvs = Landesverband.find(:all,  :select => "landesverbands.*, SUM(scores.score) AS score", 
-                :joins =>  {:nodes => :scores}, :group => "landesverbands.id", :order => 'SUM(scores.score) DESC')
+    @lvs = Province.find(:all,  :select => "provinces.*, SUM(scores.score) AS score", 
+                :joins => {:locations =>  {:users => {:nodes => :scores}}}, :group => "provinces.id", :order => 'SUM(scores.score) DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -35,8 +35,8 @@ class HighscoresController < ApplicationController
   end
   
 def parteien
-    @parteis = Partei.find(:all,  :select => "parteis.*, SUM(scores.score) AS score",
-                :joins =>  {:crews => {:nodes => :scores}},:group => "parteis.id", :order => 'SUM(scores.score) DESC')
+    @parteis = Party.find(:all,  :select => "parties.*, SUM(scores.score) AS score",
+                :joins =>  {:users => {:nodes => :scores}},:group => "parties.id", :order => 'SUM(scores.score) DESC')
 
     respond_to do |format|
       format.html # index.html.erb

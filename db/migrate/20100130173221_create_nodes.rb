@@ -5,14 +5,18 @@ class CreateNodes < ActiveRecord::Migration
       t.string :node_id
       t.decimal :lat
       t.decimal :lon
-      t.string :rev
-      t.integer :clients_count
-      t.integer :neighboors_count
+      t.string :version
 			t.text :uci
-			t.string 
+			t.date :last_seen
       
+     	t.string :avatar_file_name
+      t.string :avatar_content_type
+      t.integer :avatar_file_size
+      t.datetime :avatar_updated_at
+
+			
 			t.references :user
-			t.references :hardware
+			t.references :device
 
       t.timestamps
     end

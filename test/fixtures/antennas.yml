@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  vendor: MyString
+  polarity: MyString
+  type: MyString
+  height: 1
+  direction: 1
+  gain: 1
+  angle_horizontal: 1
+  angle_vertical: 1
+
+two:
+  name: MyString
+  vendor: MyString
+  polarity: MyString
+  type: MyString
+  height: 1
+  direction: 1
+  gain: 1
+  angle_horizontal: 1
+  angle_vertical: 1

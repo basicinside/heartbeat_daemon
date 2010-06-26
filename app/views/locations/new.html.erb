@@ -1,0 +1,23 @@
+<h1>Gebiet hinzufügen</h1>
+
+<% form_for(@location) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description, "Beschreibung" %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :province, "Bundesland" %><br />
+    <%= f.collection_select :province_id, Province.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.submit 'Erstellen' %>
+  </p>
+<% end %>
+
+<%= link_to 'Zur Übersicht', locations_path %>

@@ -1,38 +1,40 @@
-<p>
-  <b>Name:</b>
-  <%=h @node.name %>
-</p>
+<%= javascript_include_tag 'prototype' %>  <%= map_layers_includes %>
 
-<p>
-  <b>Version:</b>
-  <%=h @node.rev %>
-</p>
+<h3>Geräteansicht</h3>
+<table>
+<tr>
+<td align='right'> <b>Name:</b></td>
+<td>  <%=h @node.name %></td>
+</tr><% if @node.user %><tr>
+<td align='right'> <b>Betreiber:</b></td>
+<td>  <%=h link_to @node.user.username, @node.user %></td>
+</tr><% end %><tr><td align='right'><b>Bilder</b></td><td>
+<% for photo in @node.photos %>
+  <%= image_tag photo.data.url(:thumb), :alt => "" %>
+<% end %></td>
+</tr><tr>
+<td align='right'>   <b>Version:</b></td>
+<td>  <%=h @node.version %></td>
+</tr><tr>
+<td align='right'> <b>Benutzer:</b></td>
+<td> <img src='/node-clients-<%= @node.id %>.png'>  </td>
+</tr><tr>
+<td align='right'>  <b>Nachbarn:</b></td>
+<td> <img src='/node-neighbors-<%= @node.id %>.png'>  </td>
+</tr><tr>
+<td align='right'>   <b>geographische Position:</b></td>
+<td>  <div id="map" style="width: 300px; height: 200px;"></div>
 
-<p>
-  <b>Benutzer:</b>
-  <%=h @node.clients_count %>
-</p>
+  <%= @map.to_html %>
 
-<p>
-  <b>Nachbarn:</b>
-  <%=h @node.neighboors_count %>
-</p>
-<p>
-  <b>geographische Position:</b>
-  <a href='/maps/index?zoom=15&lat=<%=h @node.lat %>&lon=<%=h @node.lon %>'>auf Karte anzeigen</a>
-</p>
-<p>
-  <b>Crew:</b>
-     <%= link_to @node.crew.name, @node.crew %>
-</p>
-<p>
-  <b>Landesverband:</b>
-    <%= link_to  @node.landesverband.name, @node.landesverband %>
-</p>
-<p>
-  <b>Punkte:</b>
-  <%=h @node.score_count %>
-</p>
+<a href='/maps/index?zoom=15&lat=<%=h @node.lat %>&lon=<%=h @node.lon %>'>auf Karte anzeigen</a></td>
+</tr><tr>
+<td align='right'>   <b>Punkte:</b></td>
+<td>  <%=h @node.score_count %></td>
+</tr></table>
 
 
 <%= link_to 'Zur Übersicht', nodes_path %>
+<% permitted_to? :edit, :nodes do %>
+<%= link_to 'Bearbeiten', edit_node_path %>
+<% end %>

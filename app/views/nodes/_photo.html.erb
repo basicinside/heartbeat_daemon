@@ -1,0 +1,9 @@
+<div class="photo">
+<% fields_for "node[photo_attributes][]", photo do |p| %>
+  <p>
+    <%= p.label :Photo %><br />
+    <%= p.file_field :data, :index => nil %>
+    <%= link_to_function "delete", "remove_field($(this), ('.photo'))" %>
+  </p>
+<% end %>
+</div>

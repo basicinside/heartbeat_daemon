@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_salt  
       t.string :persistence_token  
 
+			t.references :role
 			t.references :party
 			t.references :location
 			t.references :group

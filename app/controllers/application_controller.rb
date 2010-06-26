@@ -13,8 +13,18 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
     helper_method :current_user  
+
+before_filter { |c| Authorization.current_user = c.current_user }
+
+
+#protected
+
+def permission_denied
+  flash[:error] = "Sorry, you are not allowed to access that page."
+  redirect_to root_url
+end
       
-    private  
+    #private  
     def current_user_session  
       return @current_user_session if defined?(@current_user_session)  
       @current_user_session = UserSession.find  

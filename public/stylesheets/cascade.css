@@ -413,7 +413,13 @@
 				background-color: inherit;
 			}
 		/** End cbi section **/
-
+input#user_openid_identifier, input#user_session_openid_identifier {
+  background: url(/images/login-bg.gif) no-repeat;
+  background-color: #fff;
+  background-position: 0 50%;
+  color: #000;
+  padding-left: 18px;
+}
 		input[type=submit],
 		input[type=reset],
 		input[type=image],

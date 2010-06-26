@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2010-06-20
+  node: 
+  neighbors: 1
+  clients: 1
+
+two:
+  date: 2010-06-20
+  node: 
+  neighbors: 1
+  clients: 1

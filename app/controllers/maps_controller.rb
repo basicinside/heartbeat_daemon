@@ -24,7 +24,7 @@ class MapsController < ApplicationController
       page << map.add_layer(MapLayers::OSM_MAPNIK , :projection => OpenLayers::Projection.new("EPSG:4326"))
       
     	page << map.add_layer(Layer::GeoRSS.new("Nodes", "/nodes/georss", { :projection => OpenLayers::Projection.new("EPSG:4326"), 
-    	 :icon => OpenLayers::Icon.new("/images/flag.png", OpenLayers::Size.new(30,30))}))
+    	 :icon => OpenLayers::Icon.new("/images/flag.png", OpenLayers::Size.new(20,20))}))
     	
     	lonlat =  OpenLayers::LonLat.new(@lon, @lat).transform(OpenLayers::Projection.new("EPSG:4326"), map.getProjectionObject())
     	page << map.set_center(lonlat, @zoom )     

@@ -7,12 +7,24 @@
    <br />  
      <%= form.label :email, "Email" %>  
      <%= form.text_field :email %>  
-   <br />  
-     <%= form.label :password, "Kennwort" %>  
-     <%= form.password_field :password %>  
-   <br />  
-     <%= form.label :password_confirmation, "Kennwort Bestätigung" %>  
-    <%= form.password_field :password_confirmation %>  
-   <br />  
-     <%= form.submit "Speichern" %>  
+	  <br />  
+		<%= form.label :location, "Gebiet" %>
+		<%= form.collection_select :location_id, Location.all, :id, :name %>
+		<%= link_to "Gebiet hinzufügen", new_location_url %>
+	 <br />
+		<% if @user.openid_identifier.blank? %>
+  	   <%= form.label :password, "Kennwort" %>  
+    	 <%= form.password_field :password %>  
+   	<br />  
+    	<%= form.label :password_confirmation, "Kennwort Bestätigung" %>  
+    	<%= form.password_field :password_confirmation %>  
+   	<br />  
+     	<%= form.submit "Speichern" %>  
+	<h3>Oder benutze OpenID</h3>
+	<% end %>
+	<%= form.label :openid_identifier, "OpenID URL" %><br />
+  <%= form.text_field :openid_identifier %>
+  <%= form.submit "Speichern" %>
+
+
  <% end %>

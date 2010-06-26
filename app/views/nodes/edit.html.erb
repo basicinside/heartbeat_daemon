@@ -1,0 +1,7 @@
+<% form_for @node, :html => { :multipart => true } do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <p><%= f.submit "Update" %></p>
+<% end %>
+
+<%= link_to 'Show', @node %> |
+<%= link_to 'Back', nodes_path %>

@@ -1,2 +1,28 @@
  <h3> New User </h3>  
- <%= render @user %> 
+ <% form_for @user do |form| %>
+ <%= form.error_messages %>
+
+   <br />
+     <%= form.label :username, "Benutzername" %>
+     <%= form.text_field :username %>
+   <br />
+     <%= form.label :email, "Email" %>
+     <%= form.text_field :email %>
+	 <br />
+    <% if @user.openid_identifier.blank? %>
+       <%= form.label :password, "Kennwort" %>
+       <%= form.password_field :password %>
+    <br />
+      <%= form.label :password_confirmation, "Kennwort Bestätigung" %>
+      <%= form.password_field :password_confirmation %>
+    <br />
+      <%= form.submit "Speichern" %>
+  <h3>Oder benutze OpenID</h3>
+  <% end %>
+  <%= form.label :openid_identifier, "OpenID URL" %><br />
+  <%= form.text_field :openid_identifier %>
+  <%= form.submit "Speichern" %>
+
+
+ <% end %>
+

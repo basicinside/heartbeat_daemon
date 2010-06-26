@@ -5,11 +5,15 @@ end
 
 def create
   @user = User.new(params[:user])
-  if @user.save
-    flash[:notice] = "Deine Registrierung war erfolgreich."
-    redirect_to root_url
-  else
-    render :action => 'new'
+
+	@user.role = Role.find_or_create_by_name("operator")
+  @user.save do |result|
+    if result
+      flash[:notice] = "Registration successful."
+      redirect_to root_url
+    else
+      render :action => 'new'
+    end
   end
 end
 
@@ -18,13 +22,15 @@ def edit
 end
 
 def update
-  @user = current_user
-  if @user.update_attributes(params[:user])
-    flash[:notice] = "Dein Profil wurde erfolgreich aktualisiert."
-    redirect_to root_url
-  else
-    render :action => 'edit'
+	@user = current_user
+  @user.attributes = params[:user]
+  @user.save do |result|
+    if result
+      flash[:notice] = "Dein Profil wurde erfolgreich aktualisiert."
+      redirect_to root_url
+    else
+      render :action => 'edit'
+    end
   end
 end
-
 end
