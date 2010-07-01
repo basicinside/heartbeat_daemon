@@ -1,6 +1,8 @@
 class NodesController < ApplicationController
+	require 'open-uri'
 	filter_access_to :all
 	map_layer :node, :text => :popup_info || :node_id, :lat => :lat || 0, :lon => :lon || 0, :id => :id
+	use_google_charts
 
 	def edit
 		@node = Node.find(params[:id])
@@ -95,7 +97,34 @@ end
       page << map.set_center(lonlat, 15 )
 		end
 		
-    respond_to do |format|
+		#neighbors and clients chart
+		heartbeats = Heartbeat.find(:all, :conditions => ["node_id = ?", @node.id])
+		clients = []
+		neighbors = []
+		dates = []
+		days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
+  	heartbeats.each { |beat|
+  		clients <<  beat.clients.to_i
+			neighbors << beat.neighbors.to_i
+			dates << beat.date.strftime("%d.%m") }
+		
+#http://chart.apis.google.com/chart?cht=bvg&chs=600x150&chd=t:7,24,18&chl=26.06|27.06|28.06&chxt=r
+#Use this
+
+	max_clients = clients.max + 10 - (clients.max % 10)
+	open("/home/robin/projects/heartbeat.piratenfreifunk.de/public/clients/#{@node.id}.png", 'wb') do |f|
+  	f << open(URI.encode("http://chart.apis.google.com/chart?cht=bvg&chs=600x150&chd=t:#{clients.join(',')}&chl=#{dates.join('|')}&chxt=r&chds=0,#{max_clients}&chxr=0,0,#{max_clients},5")).read
+	end
+
+	max_neighbors = neighbors.max + 10 - (neighbors.max % 10)
+	open("/home/robin/projects/heartbeat.piratenfreifunk.de/public/neighbors/#{@node.id}.png", 'wb') do |f|
+  	f << open(URI.encode("http://chart.apis.google.com/chart?cht=bvg&chs=600x150&chd=t:#{neighbors.join(',')}&chl=#{dates.join('|')}&chxt=r&chds=0,#{max_neighbors}&chxr=0,0,#{max_neighbors},1")).read
+	end
+
+
+  
+
+	respond_to do |format|
       format.html # show.html.erb
       #format.xml  { render :xml => @node }
       format.kml  { render :xml => @node }
@@ -126,6 +155,8 @@ end
 
 		if node.last_seen.nil? || node.last_seen < Date.today
 			heartbeat = Heartbeat.new
+			heartbeat.node = node
+			heartbeat.date = Date.today
 			#check for first time arrival
 			if Heartbeat.find_by_node_id(node.id) == nil
 				Score.new(:variant => 0, :score => 500, :node_id => node.id).save
