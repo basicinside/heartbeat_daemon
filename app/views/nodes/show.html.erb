@@ -17,10 +17,11 @@
 <td>  <%=h @node.version %></td>
 </tr><tr>
 <td align='right'> <b>Benutzer:</b></td>
-<td> <img src='/node-clients-<%= @node.id %>.png'>  </td>
+<td> 
+<%= image_tag "/clients/#{@node.id}.png" %>  </td>
 </tr><tr>
 <td align='right'>  <b>Nachbarn:</b></td>
-<td> <img src='/node-neighbors-<%= @node.id %>.png'>  </td>
+<td> <%= image_tag "/neighbors/#{@node.id}.png" %>  </td>
 </tr><tr>
 <td align='right'>   <b>geographische Position:</b></td>
 <td>  <div id="map" style="width: 300px; height: 200px;"></div>
