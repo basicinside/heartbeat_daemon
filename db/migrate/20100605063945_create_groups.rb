@@ -4,7 +4,6 @@ class CreateGroups < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :homepage
-      t.references :province
 
       t.timestamps
     end

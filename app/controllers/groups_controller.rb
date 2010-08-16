@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+	filter_access_to :all
   # GET /groups
   # GET /groups.xml
   def index
@@ -44,7 +45,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to(@group, :notice => 'Group was successfully created.') }
+        format.html { redirect_to("/users/current/edit", :notice => 'Die Gruppe wurde erfolgreich angelegt.') }
         format.xml  { render :xml => @group, :status => :created, :location => @group }
       else
         format.html { render :action => "new" }

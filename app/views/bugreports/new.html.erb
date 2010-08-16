@@ -13,13 +13,13 @@
     <% if @bugreport.version %>
     <%= f.text_field :version, :disabled => 'disabled' %>
     <% else %>
-    <%= f.collection_select :version, Node.find(:all, :select => 'rev', :group => 'rev', :order => 'rev DESC'), :rev, :rev %>
+    <%= f.collection_select :version, Node.find(:all, :select => 'version', :group => 'version', :order => 'version DESC'), :version, :version %>
      <% end %>
   </p>
     <p>
-    <%= f.label 'Hardware' %><br />
-    <%= f.collection_select :hardware_id, Hardware.all, :id, :bezeichnung %>
-    <%= link_to 'Hardware hinzufÃ¼gen', new_hardware_path %>
+    <%= f.label :device, 'GerÃ¤t' %><br />
+    <%= f.collection_select :device_id, Device.all, :id, :bezeichnung %>
+		oder <%= link_to 'GerÃ¤t hizufÃen¼g', new_device_url %>
   </p>
   <p>
     <%= f.label 'Problembericht' %><br />

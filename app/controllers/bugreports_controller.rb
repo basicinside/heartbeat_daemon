@@ -1,4 +1,5 @@
 class BugreportsController < ApplicationController
+	filter_access_to :all
   # GET /bugreports
   # GET /bugreports.xml
 

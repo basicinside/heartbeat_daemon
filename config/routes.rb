@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
     map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'  
     map.resources :user_sessions  
 	map.resources :users  
-  map.resources :hardwares, :as => 'hardware'
+  map.resources :devices, :as => 'device'
 	map.connect 'fehlerberichte/new', :controller => 'bugreports', :action => 'new',
                 :conditions => { :method => :post }
 
@@ -17,10 +17,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :lands, :as => 'laender' 
 
   map.resources :landesverbands, :as => 'bundeslaender' 
-	#map.parteien 'parteien/:id', :controller => 'parteis'
-	#map.parteien 'parteien/:action/:id', :controller => 'parteis'
+	#map.parteien 'parteien/:id', :controller => 'parties'
+	#map.parteien 'parteien/:action/:id', :controller => 'parties'
 	map.highscores 'highscores/:action', :controller => 'highscores'
-  map.resources :parteis, :as => 'parteien'
+  map.resources :parties, :as => 'parteien'
     #map.maps 'maps', :controller => 'maps', :action => 'index' 
     
   #map.maps 'maps/:action', :controller => 'maps' 

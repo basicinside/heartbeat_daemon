@@ -10,8 +10,17 @@
 	  <br />  
 		<%= form.label :location, "Gebiet" %>
 		<%= form.collection_select :location_id, Location.all, :id, :name %>
-		<%= link_to "Gebiet hinzufügen", new_location_url %>
+		oder <%= link_to "Gebiet hinzufügen", new_location_url %>
+	  <br />  
+		<%= form.label :group, "Gruppe" %>
+		<%= form.collection_select :group_id, Group.all, :id, :name %>
+		oder <%= link_to "Gruppe hinzufügen",new_group_url %>
 	 <br />
+		<%= form.label :party, "Partei" %>
+		<%= form.collection_select :party_id, Party.all, :id, :name %>
+		oder <%= link_to "Partei hinzuf�gen", new_party_url %>
+	 <br />
+	
 		<% if @user.openid_identifier.blank? %>
   	   <%= form.label :password, "Kennwort" %>  
     	 <%= form.password_field :password %>  

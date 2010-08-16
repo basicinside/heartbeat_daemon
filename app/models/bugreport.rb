@@ -1,3 +1,3 @@
 class Bugreport < ActiveRecord::Base
-	belongs_to :hardware
+	belongs_to :device
 end

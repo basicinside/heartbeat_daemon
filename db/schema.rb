@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20100622054220) do
   create_table "bugreports", :force => true do |t|
     t.string   "name"
     t.string   "version"
-    t.integer  "hardware_id"
+    t.integer  "device_id"
     t.text     "beschreibung"
     t.text     "uci"
     t.datetime "created_at"
@@ -42,20 +42,19 @@ ActiveRecord::Schema.define(:version => 20100622054220) do
     t.datetime "updated_at"
   end
 
-  create_table "groups", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "homepage"
-    t.integer  "province_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "hardwares", :force => true do |t|
+  create_table "devices", :force => true do |t|
     t.string   "name"
     t.string   "hersteller"
     t.text     "beschreibung"
     t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "homepage"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
