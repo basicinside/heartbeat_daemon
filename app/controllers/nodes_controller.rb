@@ -1,5 +1,6 @@
 class NodesController < ApplicationController
 	require 'open-uri'
+require 'digest/md5'
 	filter_access_to :all
 	map_layer :node, :text => :popup_info || :node_id, :lat => :lat || 0, :lon => :lon || 0, :id => :id
 	use_google_charts

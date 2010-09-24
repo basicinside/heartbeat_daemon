@@ -2,12 +2,16 @@
 
 <table width='60%'>
   <tr>
+    <th>Platz</th>
     <th>Name</th>
     <th>Punkte</th>
   </tr>
 
-<% for location in @locations %>
+<% counter = 0 
+for location in @locations
+counter += 1 %>
   <tr>
+    <td><%= counter %>.</td>
     <td><%= link_to location.name, location %></td>
 
     <td><center><%=h location.score %></center></td>

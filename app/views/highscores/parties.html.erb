@@ -2,12 +2,16 @@
 
 <table width='60%'>
   <tr>
+    <th>Platz</th>
     <th>Name</th>
     <th>Punkte</th>
   </tr>
 
-<% for party in @parties %>
+<% counter = 0
+for party in @parties 
+counter += 1%>
   <tr>
+    <td><%= counter %>.</td>
     <td><%= link_to party.name, party %></td>
 
     <td><center><%=h party.score %></center></td>

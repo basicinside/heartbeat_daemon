@@ -2,12 +2,17 @@
 
 <table width='60%'>
   <tr>
+<th>Platz</th>
     <th>Name</th>
     <th>Punkte</th>
   </tr>
 
-<% for group in @groups %>
+<% 
+counter = 0
+for group in @groups 
+counter += 1%>
   <tr>
+    <td><%= counter %>.</td>
     <td><%= link_to group.name, group %></td>
 
     <td><center><%=h group.score %></center></td>

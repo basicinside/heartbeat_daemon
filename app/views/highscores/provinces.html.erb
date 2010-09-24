@@ -2,12 +2,16 @@
 
 <table width='60%'>
   <tr>
+    <th>Platz</th>
     <th>Name</th>
     <th>Punkte</th>
   </tr>
 
-<% for province in @provinces %>
+<% counter = 0
+ for province in @provinces 
+counter += 1 %>
   <tr>
+    <td><%= counter %>.<td>
     <td><%= province.name %></td>
 
     <td><center><%=h province.score %></center></td>

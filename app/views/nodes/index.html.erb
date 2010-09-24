@@ -1,14 +1,19 @@
+<% counter = 0 %>
 <h3>Knoten anzeigen (<%= @nodes.count %>) </h3>
 
 <table border="0" cellspacing="0" width='100%' >
   <tr>
+<th>Platz</th>
     <th>Name</th>
+    <th>Betreiber</th>
+    <th>Gruppe</th>
+    <th>Punkte</th>
     <th>Version</th>
 
 
-    <th>Punkte</th>
   </tr>
-<% for node in @nodes %>
+<% for node in @nodes 
+counter += 1 %>
   <% if node.last_seen + 1.day >= Date.today %>
   	<tr bgcolor="#33CC00">
   <% elsif node.last_seen + 7.days > Date.today %>
@@ -16,11 +21,14 @@
   <% else %>
   	<tr bgcolor="#FF3300">
   <%end %>
-    <td><%= link_to node.name, node %></td>
-    <td align='center'><%=h node.version %></td>
+<td align='center'><%= counter %>.</td>
+    <td align='center'><%= link_to node.name, node %></td>
+    <td align='center'><%= node.user.username if node.user %></td>
+    <td align='center'><%= node.group.name if node.group %></td>
+    <td align='center'><%=h    node.score %></td>
+    <td align='center' width='120px' bgcolor="#<%= Digest::MD5.hexdigest(node.version)[0..5] %>"><%=h node.version %></td>
 
     
-    <td align='center'><%=h    node.score %></td>
   </tr>
 <% end %>
 </table>

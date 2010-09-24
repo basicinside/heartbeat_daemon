@@ -2,12 +2,16 @@
 
 <table width='60%'>
   <tr>
+    <th>Platz</th>
     <th>Name</th>
     <th>Punkte</th>
   </tr>
 
-<% for user in @users %>
+<% counter = 0
+ for user in @users 
+counter += 1%>
   <tr>
+    <td><%= counter %>.</td>
     <td><%= link_to user.username, user %></td>
 
     <td><center><%=h user.score %></center></td>
