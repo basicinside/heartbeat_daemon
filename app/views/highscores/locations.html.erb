@@ -1,0 +1,19 @@
+<h3>Highscore nach Parteien</h3>
+
+<table width='60%'>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for location in @locations %>
+  <tr>
+    <td><%= link_to location.name, location %></td>
+
+    <td><center><%=h location.score %></center></td>
+
+  </tr>
+<% end %>
+</table>
+
+

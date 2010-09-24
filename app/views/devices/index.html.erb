@@ -1,0 +1,22 @@
+<h3>Hardware anzeigen</h3>
+
+<table width='60%'>
+  <tr>
+    <th>Name</th>
+    <th>Hersteller</th>
+  </tr>
+
+<% @devices.each do |device| %>
+  <tr>
+    <td><%= link_to device.name, device.link %></td>
+    <td><%=h device.hersteller %></td>
+    <td><%= link_to 'Anzeigen', device %></td>
+    <td><%= link_to 'Bearbeiten', edit_device_path(device) %></td>
+    <td><%= link_to 'Löschen', device, :confirm => 'Bist du sicher?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Neue Hardware anlegen', new_device_path %>

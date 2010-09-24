@@ -1,0 +1,19 @@
+<h3>Highscore nach Parteien</h3>
+
+<table width='60%'>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for party in @parties %>
+  <tr>
+    <td><%= link_to party.name, party %></td>
+
+    <td><center><%=h party.score %></center></td>
+
+  </tr>
+<% end %>
+</table>
+
+

@@ -1,0 +1,19 @@
+<h3>Highscore nach Benutzern</h3>
+
+<table width='60%'>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for user in @users %>
+  <tr>
+    <td><%= link_to user.username, user %></td>
+
+    <td><center><%=h user.score %></center></td>
+
+  </tr>
+<% end %>
+</table>
+
+

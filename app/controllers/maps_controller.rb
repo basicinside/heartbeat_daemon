@@ -22,7 +22,20 @@ class MapsController < ApplicationController
   		
  
       page << map.add_layer(MapLayers::OSM_MAPNIK , :projection => OpenLayers::Projection.new("EPSG:4326"))
-      
+ #     style = OpenLayers::Style.new({ :pointRadius => "10", :fillColor => "#d3a939", :fillOpacity => 0.5, :strokeOpacity => 2, :cursor => "pointer"})
+style = OpenLayers::Style.new
+
+
+style = OpenLayers::Style.new({ :cursor => "pointer" })
+
+     	page << map.add_layer(Layer::GeoRSS.new("Nodes", "/line.xml", 
+		{ :projection => OpenLayers::Projection.new("EPSG:4326")}) , 
+		:styleMap => OpenLayers::StyleMap.new(
+			{ :default => style}
+)
+	
+	)
+
     	page << map.add_layer(Layer::GeoRSS.new("Nodes", "/nodes/georss", { :projection => OpenLayers::Projection.new("EPSG:4326"), 
     	 :icon => OpenLayers::Icon.new("/images/flag.png", OpenLayers::Size.new(20,20))}))
     	

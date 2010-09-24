@@ -9,7 +9,7 @@
     <th>Punkte</th>
   </tr>
 <% for node in @nodes %>
-  <% if node.last_seen + 1.day > Date.today %>
+  <% if node.last_seen + 1.day >= Date.today %>
   	<tr bgcolor="#33CC00">
   <% elsif node.last_seen + 7.days > Date.today %>
   	<tr bgcolor="#FFFF00">

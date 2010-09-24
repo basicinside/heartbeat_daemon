@@ -1,0 +1,19 @@
+<% form_for(@party) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :beschreibung %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :homepage %><br />
+    <%= f.text_field :homepage %>
+  </p>
+  <p>
+    <%= f.submit "Speichern" %>
+  </p>
+<% end %>

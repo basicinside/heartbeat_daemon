@@ -1,0 +1,18 @@
+<h3>Highscore nach Bundesländern</h3>
+
+<table width='60%'>
+  <tr>
+    <th>Name</th>
+    <th>Punkte</th>
+  </tr>
+
+<% for province in @provinces %>
+  <tr>
+    <td><%= province.name %></td>
+
+    <td><center><%=h province.score %></center></td>
+
+  </tr>
+<% end %>
+</table>
+

@@ -1,5 +1,7 @@
 == heartbeat daemon
 
+Der Heartbeat-Daemon ist eine Rangliste, Karte und ein Statusmonitor für Freifunk Knoten. Freifunk Router müssen das Paket heartbeat installieren und konfigurieren, um sich mit dem Server verbinden zu können.
+
 receive heartbeats from nodes running pirate freifunk
 
 heartbeat daemon is able to receive the following data in three different management modes:

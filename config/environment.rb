@@ -28,12 +28,12 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-	config.gem "authlogic"
 
+config.gem "authlogic"
 config.gem "declarative_authorization", :source => "http://gemcutter.org"
-
 config.gem "ruby-openid", :lib => "openid"
-	config.gem 'formtastic'
+gem "rack-openid", :require => "rack/openid"
+config.gem 'formtastic'
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
