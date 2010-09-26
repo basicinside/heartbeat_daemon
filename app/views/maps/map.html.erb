@@ -1,0 +1,45 @@
+<%= "hallo" %>
+
+
+<script src="/javascripts/prototype.js?1281993386" type="text/javascript"></script>  <script src="/javascripts/OpenLayers.js?1281993386" type="text/javascript"></script><link href="/stylesheets/map.css?1281993388" media="screen" rel="stylesheet" type="text/css" /><script type="text/javascript"> 
+//<![CDATA[
+OpenLayers.ImgPath='/images/OpenLayers/';
+//]]>
+</script><script type="text/javascript"> 
+//<![CDATA[
+OpenLayers.ProxyHost='/maps/proxy?url=';
+//]]>
+</script> 
+<h3>Kartenansicht</h3> 
+ 
+ 
+ 
+  <div id="map" style="width: 100%; height: 450px;"></div> 
+ 
+  <script defer="defer" type="text/javascript"> 
+var map;
+map = new OpenLayers.Map('map', {theme : false,displayProjection : new OpenLayers.Projection("EPSG:4326"),projection : new OpenLayers.Projection("EPSG:4326")});
+map.addControl(new OpenLayers.Control.Navigation());
+map.addControl(new OpenLayers.Control.PanZoomBar());
+map.addControl(new OpenLayers.Control.LayerSwitcher());
+map.addControl(new OpenLayers.Control.Attribution());
+map.addControl(new OpenLayers.Control.Permalink("permalink"));
+map.addControl(new OpenLayers.Control.MousePosition());
+map.addControl(new OpenLayers.Control.SelectFeature());
+map.addControl(new OpenLayers.Control.OverviewMap({layers : [new OpenLayers.Layer.OSM("OpenStreetMap")]}));
+map.addLayer(new OpenLayers.Layer.OSM("OpenStreetMap"),{projection : new OpenLayers.Projection("EPSG:4326")});
+map.addLayer(new OpenLayers.Layer.GeoRSS("Nodes","/nodes/georss",{icon : new OpenLayers.Icon("/images/flag.png",new OpenLayers.Size(20,20)),projection : new OpenLayers.Projection("EPSG:4326")}));
+map.addLayer(new OpenLayers.Layer.GeoRSS("Nodes","/line.xml",{projection : new OpenLayers.Projection("EPSG:4326")}));
+
+
+
+map.setCenter(new OpenLayers.LonLat("9.66797","50.99993").transform(new OpenLayers.Projection("EPSG:4326"),map.getProjectionObject()),"6");
+
+var p1 = new OpenLayers.Geometry.Point("9.66797","50.99993");
+var p2 = new OpenLayers.Geometry.Point("9.62797","50.97993");
+var line = new OpenLayers.Geometry.LineString([p1, p2]);
+     var dist = line.getGeodesicLength(new OpenLayers.Projection("EPSG:4326"));
+alert(dist);
+</script> 
+
+<b>bla</b>
